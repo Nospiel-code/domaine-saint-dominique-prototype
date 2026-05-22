@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact &amp; Réservation · Domaine Saint Dominique</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=DM+Serif+Display:ital@0;1&family=Karla:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=fallback" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="domain.css">
+<link rel="stylesheet" href="contact.css">
+</head>
+<body data-page="contact" data-screen-label="06 Contact">
+<div data-slot="header"></div>
+
+<main>
+
+<!-- ===================== PAGE HERO ===================== -->
+<section class="page-hero">
+  <div class="wrap">
+    <div class="crumb reveal">06 — Contact &amp; Réservation</div>
+    <div class="ct-hero-grid">
+      <div>
+        <div class="eyebrow reveal" data-i18n="ct.brow">Contact &amp; Réservation</div>
+        <h1 class="display-1 reveal delay-1" data-i18n="ct.h1">Écrivez-nous. Nous répondons vite.</h1>
+        <p class="lede reveal delay-2" data-i18n="ct.lede">Pour réserver, poser une question ou organiser une réception : remplissez le formulaire. Nous répondons sous 24 heures, en général dans la matinée.</p>
+      </div>
+      <div class="ct-hero-pic reveal delay-3">
+        <img src="assets/images/homepage/nicolas_et_patricia.png" alt="Nicolas &amp; Patricia, hôtes du Domaine Saint Dominique">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT BODY ===================== -->
+<section class="ct-body section-pad">
+  <div class="wrap ct-grid">
+
+    <!-- FORM -->
+    <div class="ct-form-wrap">
+      <div class="ct-form-head reveal">
+        <div class="caption">Formulaire de réservation</div>
+        <h2 class="display-2"><em>Quelques questions,</em> et c'est parti.</h2>
+      </div>
+
+      <form id="bookform" class="ct-form reveal delay-1" novalidate>
+        <!-- honeypot anti-spam (invisible) -->
+        <div class="hp" aria-hidden="true">
+          <label>Si vous êtes humain, laissez ce champ vide.<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        </div>
+
+        <fieldset class="fs">
+          <legend>01 · Qui êtes-vous ?</legend>
+          <div class="fs-grid g-2">
+            <label class="fld">
+              <span data-i18n="ct.f.first">Prénom</span>
+              <input type="text" name="firstname" required>
+            </label>
+            <label class="fld">
+              <span data-i18n="ct.f.last">Nom</span>
+              <input type="text" name="lastname" required>
+            </label>
+            <label class="fld">
+              <span data-i18n="ct.f.email">Adresse email</span>
+              <input type="email" name="email" required placeholder="vous@domaine.fr">
+            </label>
+            <label class="fld">
+              <span data-i18n="ct.f.phone">Téléphone</span>
+              <input type="tel" name="phone" placeholder="+33 6 12 34 56 78">
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="fs">
+          <legend>02 · Quand souhaitez-vous venir ?</legend>
+          <div class="fs-grid g-2">
+            <label class="fld">
+              <span data-i18n="ct.f.from">Arrivée</span>
+              <input type="date" name="from" required>
+            </label>
+            <label class="fld">
+              <span data-i18n="ct.f.to">Départ</span>
+              <input type="date" name="to" required>
+            </label>
+            <label class="fld">
+              <span data-i18n="ct.f.adults">Adultes</span>
+              <div class="stepper">
+                <button type="button" data-step="-1" data-target="adults">−</button>
+                <input type="number" name="adults" min="1" max="10" value="2">
+                <button type="button" data-step="1" data-target="adults">+</button>
+              </div>
+            </label>
+            <label class="fld">
+              <span data-i18n="ct.f.kids">Enfants</span>
+              <div class="stepper">
+                <button type="button" data-step="-1" data-target="kids">−</button>
+                <input type="number" name="kids" min="0" max="10" value="0">
+                <button type="button" data-step="1" data-target="kids">+</button>
+              </div>
+            </label>
+          </div>
+
+          <div class="rooms-pick">
+            <span class="caption">Une chambre en tête ?</span>
+            <div class="rooms-chips">
+              <button type="button" class="chip" data-room="any">Indifférent</button>
+              <button type="button" class="chip" data-room="rouge">Chambre Rouge</button>
+              <button type="button" class="chip" data-room="bleue">Chambre Bleue</button>
+              <button type="button" class="chip" data-room="rose">Chambre Rose</button>
+              <button type="button" class="chip" data-room="grise">Chambre Grise</button>
+              <button type="button" class="chip" data-room="bleue-onde">Chambre Bleue Onde</button>
+            </div>
+            <input type="hidden" name="room" value="any">
+          </div>
+        </fieldset>
+
+        <fieldset class="fs">
+          <legend>03 · Un mot pour nous</legend>
+          <label class="fld">
+            <span data-i18n="ct.f.msg">Votre message</span>
+            <textarea name="message" rows="6" placeholder="Dites-nous ce qui vous amène, vos envies, vos questions…" data-i18n-attr="placeholder:ct.f.msgPh"></textarea>
+          </label>
+        </fieldset>
+
+        <div class="ct-submit">
+          <button type="submit" class="btn btn-primary btn-lg">
+            <span data-i18n="ct.f.send">Envoyer le message</span>
+            <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+          </button>
+          <p class="caption ct-gdpr" data-i18n="ct.f.gdpr">Vos données ne servent qu'à vous répondre. Nous ne les partageons jamais.</p>
+        </div>
+
+        <div class="ct-error" hidden role="alert">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M10 5.5v5M10 13.5v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <p>Une erreur s'est produite lors de l'envoi. Réessayez ou contactez-nous directement : <a href="mailto:domainesaintdominique@wanadoo.fr">domainesaintdominique@wanadoo.fr</a></p>
+        </div>
+
+        <div class="ct-ok" hidden role="status" aria-live="polite">
+          <div class="ct-ok-icon">✓</div>
+          <h3 class="display-3" data-i18n="ct.f.ok.h">Message bien reçu — merci !</h3>
+          <p class="body" data-i18n="ct.f.ok.p">Nous vous répondrons dans les prochaines heures, à l'adresse que vous nous avez laissée. À très vite.</p>
+          <div class="ct-ok-sig">
+            <span class="hosts-sig-name">Nicolas &amp; Patricia</span>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- INFO + MAP -->
+    <aside class="ct-info">
+      <div class="ct-info-card reveal">
+        <div class="caption" data-i18n="ct.info.h">Coordonnées</div>
+        <dl class="ct-info-list">
+          <div>
+            <dt data-i18n="ct.info.addr.l">Adresse</dt>
+            <dd>
+              <span data-i18n="footer.addr">177 Quartier de Paris</span><br>
+              <span data-i18n="footer.city">83470 Seillons-Source-d'Argens</span><br>
+              <span style="color: var(--ink-faint); font-size: 13px;">Var · Provence-Alpes-Côte d'Azur · France</span>
+            </dd>
+          </div>
+          <div>
+            <dt data-i18n="ct.info.tel.l">Téléphone</dt>
+            <dd><a href="tel:+33612345678" data-i18n="footer.tel">+33 6 12 34 56 78</a></dd>
+          </div>
+          <div>
+            <dt data-i18n="ct.info.mail.l">Email</dt>
+            <dd><a href="mailto:domainesaintdominique@wanadoo.fr" data-i18n="footer.mail">domainesaintdominique@wanadoo.fr</a></dd>
+          </div>
+          <div>
+            <dt data-i18n="ct.info.hours.l">Ouverture</dt>
+            <dd data-i18n="ct.info.hours.v">Avril → Octobre · 7j/7</dd>
+          </div>
+          <div>
+            <dt data-i18n="ct.info.lang.l">Langues</dt>
+            <dd data-i18n="ct.info.lang.v">Français · English · un poco italiano</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="ct-map-card reveal delay-1">
+        <div class="ct-map">
+          <svg viewBox="0 0 320 240" fill="none">
+            <!-- subtle topographic / road map illustration -->
+            <rect width="320" height="240" fill="var(--bg-warm)"/>
+            <!-- contour lines -->
+            <g stroke="rgba(122,116,102,.2)" stroke-width="0.6" fill="none">
+              <path d="M -20 60 Q 80 30 180 60 T 340 80"/>
+              <path d="M -20 100 Q 100 70 200 100 T 340 110"/>
+              <path d="M -20 140 Q 120 110 220 140 T 340 150"/>
+              <path d="M -20 180 Q 80 150 200 180 T 340 200"/>
+            </g>
+            <!-- main road -->
+            <path d="M 0 130 Q 100 110, 160 130 T 320 130" stroke="#b85a3d" stroke-width="1.4" stroke-linecap="round" fill="none" stroke-dasharray="0"/>
+            <!-- side road -->
+            <path d="M 160 130 L 165 165 Q 180 175 200 170" stroke="rgba(184,90,61,.4)" stroke-width="1" fill="none"/>
+            <!-- village markers -->
+            <g font-family="JetBrains Mono" font-size="8" letter-spacing="0.8" fill="#4a463c">
+              <g transform="translate(40 130)"><circle r="2" fill="#7a7466"/><text x="0" y="-7" text-anchor="middle">St-Maximin</text></g>
+              <g transform="translate(280 130)"><circle r="2" fill="#7a7466"/><text x="0" y="-7" text-anchor="middle">Brignoles</text></g>
+              <g transform="translate(100 105)"><circle r="2" fill="#7a7466"/><text x="0" y="-5" text-anchor="middle">Pourrières</text></g>
+            </g>
+            <!-- DSD position -->
+            <g transform="translate(165 165)">
+              <circle r="18" fill="rgba(184,90,61,.15)"/>
+              <circle r="6" fill="#b85a3d"/>
+              <circle r="3" fill="#fff"/>
+              <text x="14" y="3" font-family="Cormorant Garamond" font-style="italic" font-size="14" fill="#1f1d18">Domaine SD</text>
+              <text x="14" y="17" font-family="JetBrains Mono" font-size="7" letter-spacing="0.8" fill="#7a7466">177 Quartier de Paris</text>
+            </g>
+          </svg>
+        </div>
+        <div class="ct-map-foot">
+          <div class="ct-map-coord">
+            <span class="caption">Lat / Lon</span>
+            <span>43°31'08"N · 5°50'42"E</span>
+          </div>
+          <a class="ct-map-link" href="https://maps.google.com/?q=Seillons-Source-d'Argens" target="_blank" rel="noopener">
+            Ouvrir dans Google Maps
+            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="ct-access reveal delay-2">
+        <div class="caption">Comment venir</div>
+        <ul class="ct-access-list">
+          <li><strong>En voiture</strong><span>A8 sortie 34 (Saint-Maximin), puis 4 km par la D560</span></li>
+          <li><strong>En train</strong><span>TGV Aix-en-Provence (35 min), nous venons vous chercher sur demande</span></li>
+          <li><strong>En avion</strong><span>Marseille-Provence ou Nice-Côte d'Azur (1h30)</span></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+</main>
+
+<div data-slot="footer"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script src="i18n.js"></script>
+<script src="partials.js"></script>
+<script src="shared.js"></script>
+<script src="contact.js"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="tweaks.jsx"></script>
+</body>
+</html>

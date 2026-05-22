@@ -1,0 +1,326 @@
+/* ============================================================
+   domain.css — shared inner-page styles + Le Domaine specifics
+   ============================================================ */
+
+/* Page hero (used on most inner pages) */
+.page-hero {
+  padding: 8.125rem 0 var(--s-7);
+  background: var(--bg);
+  border-bottom: 1px solid var(--line-soft);
+  position: relative;
+  overflow: hidden;
+}
+.page-hero .crumb {
+  margin-bottom: var(--s-7);
+}
+.page-hero-grid {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: var(--s-9);
+  align-items: end;
+}
+.page-hero-grid .eyebrow {
+  margin-bottom: var(--s-5);
+}
+.page-hero-grid .display-1 {
+  margin-bottom: var(--s-5);
+  max-width: 14ch;
+}
+.page-hero-grid .lede {
+  max-width: 48ch;
+}
+.page-hero-img {
+  align-self: stretch;
+}
+
+@media (max-width: 55rem) {
+  .page-hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--s-7);
+  }
+}
+
+/* ---------- TIMELINE ---------- */
+.timeline {
+  background: var(--bg-warm);
+  border-bottom: 1px solid var(--line-soft);
+}
+.timeline .caption {
+  margin-bottom: var(--s-6);
+  color: var(--terracotta);
+}
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+.tl-item {
+  padding: var(--s-5) var(--s-4) 0 0;
+  border-right: 1px solid var(--line-soft);
+  position: relative;
+}
+.tl-item:last-child {
+  border-right: 0;
+  padding-right: 0;
+}
+.tl-item::before {
+  content: "";
+  position: absolute;
+  top: -0.3125rem;
+  left: 0;
+  width: 0.5625rem;
+  height: 0.5625rem;
+  border-radius: 50%;
+  background: var(--terracotta);
+}
+.tl-year {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(2.25rem, 3vw, 3rem);
+  line-height: 1;
+  color: var(--terracotta);
+  margin-bottom: var(--s-3);
+}
+.tl-body h4 {
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  margin: 0 0 0.375rem;
+  color: var(--ink);
+}
+.tl-body p {
+  font-size: 0.84375rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin: 0;
+  padding-right: var(--s-3);
+}
+
+@media (max-width: 61.25rem) {
+  .timeline-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .tl-item {
+    border-right: 0;
+    border-bottom: 1px solid var(--line-soft);
+    padding-bottom: var(--s-5);
+    padding-right: 0;
+  }
+}
+@media (max-width: 40rem) {
+  .timeline-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- DOM FEATURE SECTIONS ---------- */
+.dom-section {
+  border-bottom: 1px solid var(--line-soft);
+}
+.dom-feature {
+  display: grid;
+  grid-template-columns: 5fr 6fr;
+  gap: var(--s-9);
+  align-items: center;
+}
+.dom-feature-rev {
+  grid-template-columns: 6fr 5fr;
+}
+.dom-feature-text .eyebrow {
+  margin-bottom: var(--s-4);
+}
+.dom-feature-text .display-2 {
+  margin-bottom: var(--s-6);
+  max-width: 16ch;
+}
+.dom-feature-text .body {
+  margin-bottom: var(--s-6);
+  max-width: 50ch;
+}
+
+.dom-feature-imgs {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--s-4);
+  align-items: end;
+}
+.dom-feature-imgs > :nth-child(2) {
+  margin-bottom: 2.5rem;
+}
+.dom-feature-imgs img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius);
+}
+.page-hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius);
+}
+.hosts-portrait img {
+  width: 110%;
+  height: 110%;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius);
+}
+
+@media (max-width: 55rem) {
+  .dom-feature,
+  .dom-feature-rev {
+    grid-template-columns: 1fr;
+    gap: var(--s-7);
+  }
+}
+
+/* ---------- SPEC LIST ---------- */
+.spec-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-4) var(--s-7);
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--line);
+  margin: 0;
+}
+.spec-list div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.spec-list dt {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.spec-list dd {
+  font-family: var(--serif);
+  font-size: 1.375rem;
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+/* ---------- HOSTS ---------- */
+.hosts {
+  background: var(--bg);
+  border-bottom: 1px solid var(--line-soft);
+  position: relative;
+}
+.hosts-head {
+  margin-bottom: var(--s-7);
+}
+.hosts-head .eyebrow {
+  margin-bottom: var(--s-5);
+}
+.hosts-grid {
+  display: grid;
+  grid-template-columns: 5fr 6fr;
+  gap: var(--s-9);
+  align-items: start;
+}
+.hosts-portrait {
+  position: sticky;
+  top: 6.25rem;
+}
+.hosts-cap {
+  margin-top: var(--s-4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--ink-faint);
+}
+.hosts-cap::after {
+  content: "";
+  flex: 1;
+  margin-left: var(--s-4);
+  height: 1px;
+  background: var(--line);
+}
+.hosts-text .body p {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+.hosts-text .body {
+  margin-bottom: var(--s-6);
+  max-width: 58ch;
+}
+
+.hosts-sig {
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+}
+.hosts-sig-name {
+  font-family: var(--serif);
+  font-size: 1.75rem;
+  font-style: italic;
+  color: var(--ink);
+}
+
+@media (max-width: 55rem) {
+  .hosts-grid {
+    grid-template-columns: 1fr;
+    gap: var(--s-7);
+  }
+  .hosts-portrait {
+    position: static;
+  }
+}
+
+/* ---------- HOSTS LOVES ---------- */
+.hosts-loves {
+  margin-top: var(--s-9);
+  padding-top: var(--s-7);
+  border-top: 1px solid var(--line);
+}
+.hosts-loves-title {
+  margin-bottom: var(--s-5);
+  color: var(--terracotta);
+}
+.loves-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s-5) var(--s-7);
+}
+.loves-grid li {
+  font-family: var(--serif);
+  font-size: 1.375rem;
+  line-height: 1.3;
+  display: flex;
+  gap: var(--s-3);
+  align-items: baseline;
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--line-soft);
+}
+.loves-num {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: var(--terracotta);
+  flex-shrink: 0;
+}
+
+@media (max-width: 55rem) {
+  .loves-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 30rem) {
+  .loves-grid {
+    grid-template-columns: 1fr;
+  }
+}

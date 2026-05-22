@@ -1,0 +1,154 @@
+/* ============================================================
+   rooms.css
+   ============================================================ */
+
+.rooms-key {
+  border-top: 1px solid var(--line);
+  padding-top: var(--s-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+}
+.rooms-key-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-4);
+  padding-bottom: var(--s-4);
+  border-bottom: 1px solid var(--line-soft);
+}
+.rooms-key-item:last-child { border-bottom: 0; padding-bottom: 0; }
+.rooms-key-k {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 2.25rem;
+  color: var(--terracotta);
+  line-height: 1;
+}
+.rooms-key-v {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  text-align: right;
+}
+
+/* ---------- ROOM ENTRIES ---------- */
+.room {
+  border-top: 1px solid var(--line);
+  padding-top: var(--s-7);
+  margin-top: var(--s-8);
+}
+.room:first-of-type { margin-top: 0; }
+.room-num {
+  margin-bottom: var(--s-5);
+  color: var(--terracotta);
+  display: block;
+}
+.room-block {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: var(--s-7);
+  align-items: start;
+}
+.room-rev .room-block { grid-template-columns: 1fr 1.15fr; }
+.room-rev .room-imgs { order: 2; }
+.room-rev .room-text { order: 1; }
+
+.room-imgs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: var(--s-3);
+}
+.room-main { grid-column: 1 / span 2; grid-row: 1; aspect-ratio: 16/9; }
+.room-sec { aspect-ratio: 4/5; }
+.room-imgs img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: var(--radius); }
+
+.room-text { padding-top: 0.5rem; }
+.room-tag { color: var(--terracotta); margin-bottom: var(--s-3); display: block; }
+.room-text .display-2 { font-size: clamp(2.5rem, 4vw, 3.5rem); margin-bottom: var(--s-4); }
+.room-text .lede { font-size: 1.125rem; margin-bottom: var(--s-6); max-width: 42ch; }
+
+.room-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-3) var(--s-5);
+  padding: var(--s-5) 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.room-specs > div { display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem; }
+.room-specs .caption { color: var(--ink-faint); }
+.room-specs span:last-child {
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  color: var(--ink);
+  text-align: right;
+  line-height: 1.3;
+}
+
+.room-bottom {
+  margin-top: var(--s-5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+  flex-wrap: wrap;
+}
+.room-price { display: flex; align-items: baseline; gap: 0.5rem; }
+.room-price-v {
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1;
+}
+
+@media (max-width: 61.25rem) {
+  .room-block, .room-rev .room-block { grid-template-columns: 1fr; gap: var(--s-6); }
+  .room-rev .room-imgs { order: 1; }
+  .room-rev .room-text { order: 2; }
+}
+
+/* ---------- INCLUDED ---------- */
+.included { background: var(--bg-warm); border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
+.incl-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+.incl-grid li {
+  display: flex;
+  gap: var(--s-3);
+  padding: var(--s-5) var(--s-4) var(--s-5) 0;
+  border-right: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+}
+.incl-grid li:nth-child(4n) { border-right: 0; padding-right: 0; }
+.incl-num {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: var(--terracotta);
+  flex-shrink: 0;
+  padding-top: 0.25rem;
+}
+.incl-grid li > span:last-child { font-size: 0.84375rem; line-height: 1.55; color: var(--ink-soft); }
+.incl-grid li strong { font-family: var(--serif); font-size: 1.375rem; font-weight: 400; color: var(--ink); display: block; margin-bottom: 0.25rem; line-height: 1.2; }
+
+@media (max-width: 61.25rem) {
+  .incl-grid { grid-template-columns: 1fr 1fr; }
+  .incl-grid li { border-right: 1px solid var(--line-soft); padding-right: var(--s-4); }
+  .incl-grid li:nth-child(2n) { border-right: 0; padding-right: 0; }
+  .incl-grid li:nth-child(4n) { border-right: 0; padding-right: 0; }
+}
+@media (max-width: 35rem) {
+  .incl-grid { grid-template-columns: 1fr; }
+  .incl-grid li { border-right: 0; padding-right: 0; }
+}
