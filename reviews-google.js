@@ -28,8 +28,8 @@
 window.DSD = window.DSD || {};
 window.DSD.googleReviews = {
   placeId:         'REPLACE_WITH_PLACE_ID', /* ← paste Place ID here */
-  rating:          4.9,
-  userRatingCount: 312,
+  rating:          4.4,
+  userRatingCount: 67,
 
   reviews: [
     {

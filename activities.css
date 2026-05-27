@@ -11,9 +11,74 @@
   display: flex;
   flex-direction: column;
   gap: var(--s-4);
+  max-height: calc(100vh - 12rem);
 }
-.map-illus { aspect-ratio: 1 / 1.1; }
-.map-illus svg { width: 100%; height: 100%; }
+.map-illus {
+  aspect-ratio: 4 / 3;
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  flex: 1;
+  min-height: 0;
+}
+#act-map {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 180px;
+}
+/* Amber pin */
+.dsd-map-pin {
+  background: var(--amber, #b5623a) !important;
+  border: 2px solid #fff !important;
+  border-radius: 50% !important;
+  box-shadow: 0 0 0 4px rgba(181, 98, 58, 0.28) !important;
+}
+/* Popup */
+.dsd-popup em {
+  font-family: var(--serif, "Cormorant Garamond", serif);
+  font-style: italic;
+  font-size: 1rem;
+}
+.leaflet-popup-content-wrapper {
+  border-radius: 2px !important;
+  font-family: var(--mono, "JetBrains Mono", monospace);
+  font-size: 0.75rem !important;
+  background: var(--paper, #f8f4e9) !important;
+  color: var(--ink, #222019) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12) !important;
+}
+.leaflet-popup-tip { background: var(--paper, #f8f4e9) !important; }
+/* Attribution */
+.leaflet-control-attribution {
+  font-family: var(--mono, monospace) !important;
+  font-size: 0.5rem !important;
+  background: rgba(241,237,226,0.75) !important;
+  backdrop-filter: blur(4px);
+  color: var(--ink-faint, #7a7466) !important;
+}
+.leaflet-control-attribution a { color: var(--ink-faint, #7a7466) !important; }
+/* Zoom buttons */
+.leaflet-control-zoom a {
+  border-radius: 2px !important;
+  background: var(--paper, #f8f4e9) !important;
+  color: var(--ink, #222019) !important;
+  border-color: var(--line, #d2c8b0) !important;
+  font-size: 1rem !important;
+}
+/* Compass overlay */
+.map-compass {
+  position: absolute;
+  bottom: var(--s-3, 0.75rem);
+  right: var(--s-3, 0.75rem);
+  z-index: 500;
+  background: rgba(241, 237, 226, 0.82);
+  border-radius: 50%;
+  padding: 5px;
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+}
 .map-meta {
   display: flex;
   justify-content: space-between;
@@ -166,41 +231,58 @@
 .sport-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  border-top: 1px solid var(--line);
+  gap: var(--s-5);
+  margin-top: var(--s-7);
 }
 .sport-card {
-  padding: var(--s-6);
-  border-right: 1px solid var(--line-soft);
-  border-bottom: 1px solid var(--line-soft);
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .25s ease, border-color .25s ease;
+}
+.sport-card:hover { transform: translateY(-0.1875rem); border-color: var(--line); }
+.sport-card:hover h4 { color: var(--terracotta); }
+.sport-card-img {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.sport-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s ease;
+}
+.sport-card:hover .sport-card-img img { transform: scale(1.04); }
+.sport-card-body {
+  padding: var(--s-5);
   display: flex;
   flex-direction: column;
   gap: var(--s-3);
-}
-.sport-card:nth-child(3n) { border-right: 0; padding-right: 0; }
-.sport-card:nth-child(1), .sport-card:nth-child(2), .sport-card:nth-child(3) { padding-top: var(--s-6); }
-.sport-num {
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
-  color: var(--terracotta);
+  flex: 1;
 }
 .sport-card h4 {
   font-family: var(--serif);
-  font-size: 1.875rem;
+  font-size: 1.5rem;
   font-weight: 400;
   margin: 0;
   color: var(--ink);
+  line-height: 1.15;
+  transition: color .2s ease;
 }
 .sport-card p {
-  font-size: 0.90625rem;
+  font-size: 0.875rem;
   line-height: 1.55;
   color: var(--ink-soft);
   margin: 0;
 }
 .sport-tag {
   margin-top: auto;
-  padding-top: var(--s-3);
+  padding-top: var(--s-4);
   font-family: var(--mono);
   font-size: 0.75rem;
   letter-spacing: 0.1em;
@@ -210,12 +292,9 @@
 
 @media (max-width: 55rem) {
   .sport-grid { grid-template-columns: 1fr 1fr; }
-  .sport-card:nth-child(3n) { border-right: 1px solid var(--line-soft); padding-right: var(--s-6); }
-  .sport-card:nth-child(2n) { border-right: 0; padding-right: 0; }
 }
 @media (max-width: 35rem) {
   .sport-grid { grid-template-columns: 1fr; }
-  .sport-card { border-right: 0 !important; padding-right: 0 !important; }
 }
 
 /* MARKETS — dark section */

@@ -12,7 +12,7 @@
 
 /* ---------- HERO ---------- */
 .hero {
-  padding: 8.125rem 0 var(--s-7);
+  padding: var(--s-7) 0 var(--s-6);
   position: relative;
   overflow: hidden;
 }
@@ -43,7 +43,7 @@
   grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   gap: var(--s-7);
   align-items: center;
-  min-height: 36.25rem;
+  min-height: clamp(22rem, calc(100vh - 14rem), 36.25rem);
 }
 
 .hero-text {
@@ -73,7 +73,7 @@
   grid-template-columns: 1.4fr 1fr 1fr;
   grid-template-rows: 1.1fr 1fr;
   gap: 0.875rem;
-  height: 36.25rem;
+  height: clamp(22rem, calc(100vh - 14rem), 36.25rem);
 }
 .hero-img {
   border-radius: var(--radius);
@@ -148,7 +148,7 @@
 }
 @media (max-width: 40rem) {
   .hero {
-    padding-top: 6.25rem;
+    padding-top: var(--s-5);
   }
   .hero-mosaic {
     height: auto;
@@ -195,7 +195,7 @@
 
 .facts {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -471,6 +471,15 @@
 }
 .act-body h3 {
   transition: color 0.2s ease;
+}
+.act-body .caption {
+  display: inline-block;
+  background: var(--terracotta);
+  color: var(--bg);
+  border-radius: var(--radius-pill);
+  padding: 0.3em 0.875em;
+  letter-spacing: 0.13em;
+  align-self: flex-start;
 }
 .act-body .body {
   font-size: 0.90625rem;

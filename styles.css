@@ -10,6 +10,8 @@
   --paper: #f8f4e9;
   --terracotta: #6b7547;
   --terracotta-deep: #4d5530;
+  --amber: #b5623a;
+  --amber-deep: #8f4a29;
   --olive: #8a6a4a;
   --olive-deep: #6b5036;
   --sand: #cdb98c;
@@ -26,7 +28,7 @@
   --mono: "JetBrains Mono", ui-monospace, monospace;
   --display-weight: 400;
   --display-tracking: -0.015em;
-  --italic-color: var(--terracotta);
+  --italic-color: var(--amber);
 
   /* Spacing — overridden by body[data-density] modes below */
   --s-1: 0.25rem;
@@ -49,7 +51,7 @@
 
   /* Theming hooks */
   --header-bg-rgba: 241, 237, 226;
-  --star-color: var(--terracotta);
+  --star-color: var(--amber);
 
   /* Layout */
   --max: 82.5rem;
@@ -202,6 +204,19 @@ body[data-eyebrow="bracket"] .eyebrow::before {
   font-size: 0.75rem;
   line-height: 1;
   transform: translateY(-1px);
+}
+body[data-eyebrow="capsule"] .eyebrow {
+  background: var(--amber);
+  color: var(--bg);
+  border-radius: var(--radius-pill);
+  padding: 0.35em 1em;
+  letter-spacing: 0.13em;
+}
+body[data-eyebrow="capsule"] .eyebrow::before {
+  display: none;
+}
+body[data-italic="amber"] {
+  --italic-color: var(--amber);
 }
 body[data-eyebrow="bracket"] .eyebrow::after {
   content: "]";
@@ -372,6 +387,7 @@ select {
   display: inline-flex;
   align-items: center;
   gap: 0.625rem;
+  margin-bottom: var(--s-4);
 }
 .eyebrow::before {
   content: "";
@@ -383,7 +399,7 @@ select {
 .display-1 {
   font-family: var(--serif);
   font-weight: var(--display-weight);
-  font-size: clamp(3rem, 7.5vw, 6rem);
+  font-size: clamp(3rem, 7.5vw, 5rem);
   line-height: 0.98;
   letter-spacing: -0.02em;
   margin: 0;
@@ -970,7 +986,7 @@ main {
   padding-top: 5.375rem;
 }
 .page-hero {
-  padding: var(--s-9) 0 var(--s-7);
+  padding: var(--s-6) 0 var(--s-7);
   border-bottom: 1px solid var(--line-soft);
 }
 .page-hero .eyebrow {

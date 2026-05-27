@@ -17,8 +17,8 @@
 
 window.DSD = window.DSD || {};
 window.DSD.taReviews = {
-  rating:     4.8,
-  total:      108,
+  rating:     4.9,
+  total:      215,
   badge:      'Travellers\' Choice',
   profileUrl: 'https://www.tripadvisor.fr/Hotel_Review-g2189461-d2178064-Reviews-Domaine_Saint_Dominique',
 

@@ -1,288 +1,371 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Les Chambres · Domaine Saint Dominique</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=DM+Serif+Display:ital@0;1&family=Karla:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=fallback" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="home.css">
-<link rel="stylesheet" href="domain.css">
-<link rel="stylesheet" href="rooms.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Les Chambres · Domaine Saint Dominique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=DM+Serif+Display:ital@0;1&family=Karla:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=fallback"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="domain.css">
+  <link rel="stylesheet" href="rooms.css">
 </head>
+
 <body data-page="rooms" data-screen-label="03 Les Chambres">
-<div data-slot="header"></div>
+  <div data-slot="header"></div>
 
-<main>
+  <main>
 
-<!-- ===================== PAGE HERO ===================== -->
-<section class="page-hero">
-  <div class="wrap">
-    <div class="crumb reveal">03 — Les Chambres</div>
-    <div class="page-hero-grid">
-      <div>
-        <div class="eyebrow reveal" data-i18n="rooms.brow">Les Chambres</div>
-        <h1 class="display-1 reveal delay-1" data-i18n="rooms.h1">Cinq chambres, cinq couleurs, cinq atmosphères.</h1>
-        <p class="lede reveal delay-2" data-i18n="rooms.lede">Toutes nos chambres sont équipées d'une salle de bain privative, de linge de lit en lin lavé, du wifi, et donnent sur le parc ou les collines. Les petits-déjeuners sont inclus.</p>
-      </div>
-      <div class="rooms-key reveal delay-3">
-        <div class="rooms-key-item">
-          <div class="rooms-key-k">5</div>
-          <div class="rooms-key-v" data-i18n="rooms.key.rooms">chambres</div>
-        </div>
-        <div class="rooms-key-item">
-          <div class="rooms-key-k">2 → 4</div>
-          <div class="rooms-key-v" data-i18n="rooms.key.pax">personnes / chambre</div>
-        </div>
-        <div class="rooms-key-item">
-          <div class="rooms-key-k">145 → 210€</div>
-          <div class="rooms-key-v" data-i18n="rooms.key.price">par nuit, petit-déj inclus</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== ROOMS LIST ===================== -->
-<section class="rooms-list section-pad">
-  <div class="wrap">
-
-    <!-- ROUGE -->
-    <article class="room" id="rouge">
-      <div class="room-num caption reveal">N° 01</div>
-      <div class="room-block reveal delay-1">
-        <div class="room-imgs">
-          <img class="room-main" src="assets/images/chambres/red_room_bedroom_double_bed_high_angle.jpg" alt="Chambre Rouge · vue d'ensemble">
-          <img class="room-sec" src="assets/images/chambres/red_room_bedroom_twin_and_double_beds.jpg" alt="Chambre Rouge · lits et décor">
-          <img class="room-sec" src="assets/images/chambres/red_room_bathroom_red_white_checkered_tiles.jpg" alt="Salle de bain · carrelage damier rouge et blanc">
-        </div>
-        <div class="room-text">
-          <div class="room-tag caption" data-i18n="rooms.rouge.tag">Rez-de-chaussée · vue oliveraie</div>
-          <h2 class="display-2">Chambre Rouge</h2>
-          <p class="lede" data-i18n="rooms.rouge.lede">Notre chambre la plus lumineuse. Trois fenêtres plein sud, ouvertes sur les oliviers. Pierre apparente, sol en tomettes, lit en lin écru.</p>
-          <div class="room-specs">
-            <div><span class="caption" data-i18n="rooms.spec.surface">Surface</span><span>22 m²</span></div>
-            <div><span class="caption" data-i18n="rooms.spec.capacity">Capacité</span><span data-i18n="rooms.rouge.capacity">2 personnes</span></div>
-            <div><span class="caption" data-i18n="rooms.spec.bed">Lit</span><span>Queen size · 160×200</span></div>
-            <div><span class="caption" data-i18n="rooms.spec.view">Vue</span><span data-i18n="rooms.rouge.view">Oliveraie · sud</span></div>
-            <div><span class="caption" data-i18n="rooms.spec.amenities">Équipements</span><span data-i18n="rooms.rouge.amenities">Climatisation · WiFi · Coffre</span></div>
-            <div><span class="caption" data-i18n="rooms.spec.breakfast">Petit-déj</span><span data-i18n="rooms.rouge.breakfast">Inclus</span></div>
+    <!-- ===================== PAGE HERO ===================== -->
+    <section class="page-hero">
+      <div class="wrap">
+        <div class="page-hero-grid">
+          <div>
+            <div class="eyebrow reveal" data-i18n="rooms.brow">Les Chambres</div>
+            <h1 class="display-1 reveal delay-1" data-i18n="rooms.h1">Cinq chambres, cinq couleurs, cinq atmosphères.
+            </h1>
+            <p class="lede reveal delay-2" data-i18n="rooms.lede">Toutes nos chambres sont équipées d'une salle de bain
+              privative, de linge de lit en lin lavé, du wifi, et donnent sur le parc ou les collines. Les
+              petits-déjeuners sont inclus.</p>
           </div>
-          <div class="room-bottom">
-            <div class="room-price">
-              <span class="caption" data-i18n="rooms.from">à partir de</span>
-              <span class="room-price-v">145 €</span>
-              <span class="caption" data-i18n="rooms.night">/ nuit</span>
+          <div class="rooms-key reveal delay-3">
+            <div class="rooms-key-item">
+              <div class="rooms-key-k">5</div>
+              <div class="rooms-key-v" data-i18n="rooms.key.rooms">chambres</div>
             </div>
-            <a class="btn btn-ink" href="contact.html#book-rouge">
-              <span data-i18n="rooms.book">Réserver cette chambre</span>
-              <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- BLEUE -->
-    <article class="room room-rev" id="bleue">
-      <div class="room-num caption reveal">N° 02</div>
-      <div class="room-block reveal delay-1">
-        <div class="room-imgs">
-          <img class="room-main" src="assets/images/chambres/blue_room_bedroom_wrought_iron_headboard_full.jpg" alt="Chambre Bleue · lit en fer forgé">
-          <img class="room-sec" src="assets/images/chambres/blue_room_sitting_area_blue_chairs.jpg" alt="Chambre Bleue · coin salon">
-          <img class="room-sec" src="assets/images/chambres/blue_room_bathroom_grey_tiles_wooden_vanity.jpg" alt="Salle de bain · carrelage gris et meuble bois">
-        </div>
-        <div class="room-text">
-          <div class="room-tag caption" data-i18n="rooms.bleue.tag">1er étage · terrasse privée</div>
-          <h2 class="display-2">Chambre Bleue</h2>
-          <p class="lede" data-i18n="rooms.bleue.lede">La plus calme. Au bout du couloir, donnant sur sa propre terrasse à l'ombre du grand platane. Notre chambre préférée à l'heure de la sieste.</p>
-          <div class="room-specs">
-            <div><span class="caption" data-i18n="rooms.spec.surface">Surface</span><span>28 m² + 12 m² terrasse</span></div>
-            <div><span class="caption" data-i18n="rooms.spec.capacity">Capacité</span><span data-i18n="rooms.bleue.capacity">2 personnes</span></div>
-            <div><span class="caption" data-i18n="rooms.spec.bed">Lit</span><span>King size · 180×200</span></div>
-            <div><span class="caption" data-i18n="rooms.spec.view">Vue</span><span data-i18n="rooms.bleue.view">Parc · platanes</span></div>
-            <div><span class="caption" data-i18n="rooms.spec.amenities">Équipements</span><span data-i18n="rooms.bleue.amenities">Climatisation · WiFi · Bouilloire</span></div>
-            <div><span class="caption" data-i18n="rooms.spec.breakfast">Petit-déj</span><span data-i18n="rooms.bleue.breakfast">Inclus · servable en chambre</span></div>
-          </div>
-          <div class="room-bottom">
-            <div class="room-price">
-              <span class="caption" data-i18n="rooms.from">à partir de</span>
-              <span class="room-price-v">165 €</span>
-              <span class="caption" data-i18n="rooms.night">/ nuit</span>
+            <div class="rooms-key-item">
+              <div class="rooms-key-k">2 à 4</div>
+              <div class="rooms-key-v" data-i18n="rooms.key.pax">personnes / chambre</div>
             </div>
-            <a class="btn btn-ink" href="contact.html#book-bleue">
-              <span data-i18n="rooms.book">Réserver cette chambre</span>
-              <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- ROSE -->
-    <article class="room" id="rose">
-      <div class="room-num caption reveal">N° 03</div>
-      <div class="room-block reveal delay-1">
-        <div class="room-imgs">
-          <img class="room-main" src="assets/images/chambres/pink_room_bedroom_pink_floral_bed_and_dresser.jpg" alt="Chambre Rose · lit fleuri et commode">
-          <img class="room-sec" src="assets/images/chambres/pink_room_bedroom_pink_floral_mirrored_armoire.jpg" alt="Chambre Rose · armoire à miroir">
-          <img class="room-sec" src="assets/images/chambres/pink_room_bathroom_pink_diamond_tiles_shower.jpg" alt="Salle de bain · carrelage diamant rose">
-        </div>
-        <div class="room-text">
-          <div class="room-tag caption" data-i18n="rooms.rose.tag">Combles · sous les poutres</div>
-          <h2 class="display-2">Chambre Rose</h2>
-          <p class="lede" data-i18n="rooms.rose.lede">Une alcôve sous les toits, au calme. Poutres d'origine, lucarne sur le ciel, sol en chêne ciré. Idéal pour les couples qui aiment se cacher du monde.</p>
-          <div class="room-specs">
-            <div><span class="caption" data-i18n="rooms.spec.surface">Surface</span><span>24 m²</span></div>
-            <div><span class="caption" data-i18n="rooms.spec.capacity">Capacité</span><span data-i18n="rooms.rose.capacity">2 personnes</span></div>
-            <div><span class="caption" data-i18n="rooms.spec.bed">Lit</span><span>Queen size · 160×200</span></div>
-            <div><span class="caption" data-i18n="rooms.spec.view">Vue</span><span data-i18n="rooms.rose.view">Collines · ouest</span></div>
-            <div><span class="caption" data-i18n="rooms.spec.amenities">Équipements</span><span data-i18n="rooms.rose.amenities">Ventilateur · WiFi · Bureau</span></div>
-            <div><span class="caption" data-i18n="rooms.spec.breakfast">Petit-déj</span><span data-i18n="rooms.rose.breakfast">Inclus</span></div>
-          </div>
-          <div class="room-bottom">
-            <div class="room-price">
-              <span class="caption" data-i18n="rooms.from">à partir de</span>
-              <span class="room-price-v">155 €</span>
-              <span class="caption" data-i18n="rooms.night">/ nuit</span>
+            <div class="rooms-key-item">
+              <div class="rooms-key-k">145 à 210€</div>
+              <div class="rooms-key-v" data-i18n="rooms.key.price">par nuit, petit-déj inclus</div>
             </div>
-            <a class="btn btn-ink" href="contact.html#book-rose">
-              <span data-i18n="rooms.book">Réserver cette chambre</span>
-              <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
-            </a>
           </div>
         </div>
       </div>
-    </article>
+    </section>
 
-    <!-- GRISE -->
-    <article class="room room-rev" id="grise">
-      <div class="room-num caption reveal">N° 04</div>
-      <div class="room-block reveal delay-1">
-        <div class="room-imgs">
-          <img class="room-main" src="assets/images/chambres/grey_room_bedroom_double_bed_vintage_love_seat.jpg" alt="Chambre Grise · lit double et canapé vintage">
-          <img class="room-sec" src="assets/images/chambres/grey_room_bedroom_twin_beds_blue_quilts.jpg" alt="Chambre Grise · lits simples avec courtepointes bleues">
-          <img class="room-sec" src="assets/images/chambres/grey_room_bathroom_light_blue_tiles_shower_and_toilet.jpg" alt="Salle de bain · carrelage bleu clair">
-        </div>
-        <div class="room-text">
-          <div class="room-tag caption" data-i18n="rooms.grise.tag">Suite familiale · 2 pièces</div>
-          <h2 class="display-2">Chambre Grise</h2>
-          <p class="lede" data-i18n="rooms.grise.lede">La plus grande, conçue pour les familles. Deux pièces communicantes, salle de bain partagée, un dressing. Vue sur la haie de cyprès et les collines.</p>
-          <div class="room-specs">
-            <div><span class="caption" data-i18n="rooms.spec.surface">Surface</span><span>36 m² · 2 pièces</span></div>
-            <div><span class="caption" data-i18n="rooms.spec.capacity">Capacité</span><span data-i18n="rooms.grise.capacity">4 personnes (2 + 2)</span></div>
-            <div><span class="caption" data-i18n="rooms.spec.beds">Lits</span><span>1 King + 2 simples 90×190</span></div>
-            <div><span class="caption" data-i18n="rooms.spec.view">Vue</span><span data-i18n="rooms.grise.view">Haie de cyprès · est</span></div>
-            <div><span class="caption" data-i18n="rooms.spec.amenities">Équipements</span><span data-i18n="rooms.grise.amenities">Climatisation · WiFi · Lit bébé sur dem.</span></div>
-            <div><span class="caption" data-i18n="rooms.spec.breakfast">Petit-déj</span><span data-i18n="rooms.grise.breakfast">Inclus (enfants -50 %)</span></div>
-          </div>
-          <div class="room-bottom">
-            <div class="room-price">
-              <span class="caption" data-i18n="rooms.from">à partir de</span>
-              <span class="room-price-v">210 €</span>
-              <span class="caption" data-i18n="rooms.night">/ nuit</span>
+    <!-- ===================== ROOMS LIST ===================== -->
+    <section class="rooms-list section-pad">
+      <div class="wrap">
+
+        <!-- ROUGE -->
+        <article class="room" id="rouge">
+          <div class="room-block reveal delay-1">
+            <div class="room-imgs">
+              <img class="room-main" src="assets/images/chambres/red_room_bedroom_double_bed_high_angle.jpg"
+                alt="Chambre Rouge · vue d'ensemble">
+              <img class="room-sec" src="assets/images/chambres/red_room_bedroom_twin_and_double_beds.jpg"
+                alt="Chambre Rouge · lits et décor">
+              <img class="room-sec" src="assets/images/chambres/red_room_bathroom_red_white_checkered_tiles.jpg"
+                alt="Salle de bain · carrelage damier rouge et blanc">
             </div>
-            <a class="btn btn-ink" href="contact.html#book-grise">
-              <span data-i18n="rooms.book">Réserver cette chambre</span>
-              <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- BLEUE ONDE -->
-    <article class="room" id="bleue-onde">
-      <div class="room-num caption reveal">N° 05</div>
-      <div class="room-block reveal delay-1">
-        <div class="room-imgs">
-          <img class="room-main" src="assets/images/chambres/wave_blue_room_bedroom_blue_walls_canopy_bed_full.jpg" alt="Chambre Bleue Onde · lit à baldaquin et murs bleus">
-          <img class="room-sec" src="assets/images/chambres/wave_blue_room_bedroom_blue_walls_canopy_bed_door.jpg" alt="Chambre Bleue Onde · vue depuis l'entrée">
-          <img class="room-sec" src="assets/images/chambres/wave_blue_room_bathroom_blue_tiles_vintage_mirror.jpg" alt="Salle de bain · carrelage bleu et miroir vintage">
-        </div>
-        <div class="room-text">
-          <div class="room-tag caption" data-i18n="rooms.onde.tag">1er étage · cheminée fonctionnelle</div>
-          <h2 class="display-2">Chambre Bleue Onde</h2>
-          <p class="lede" data-i18n="rooms.onde.lede">L'ancienne chambre du maître de maison. Cheminée d'origine, allumée d'octobre à mars sur demande. Le coin de lecture est devenu notre QG préféré l'hiver.</p>
-          <div class="room-specs">
-            <div><span class="caption" data-i18n="rooms.spec.surface">Surface</span><span>26 m²</span></div>
-            <div><span class="caption" data-i18n="rooms.spec.capacity">Capacité</span><span data-i18n="rooms.onde.capacity">2 personnes</span></div>
-            <div><span class="caption" data-i18n="rooms.spec.bed">Lit</span><span>King size · 180×200</span></div>
-            <div><span class="caption" data-i18n="rooms.spec.view">Vue</span><span data-i18n="rooms.onde.view">Allée de platanes · nord</span></div>
-            <div><span class="caption" data-i18n="rooms.spec.amenities">Équipements</span><span data-i18n="rooms.onde.amenities">Cheminée · WiFi · Coffre</span></div>
-            <div><span class="caption" data-i18n="rooms.spec.breakfast">Petit-déj</span><span data-i18n="rooms.onde.breakfast">Inclus</span></div>
-          </div>
-          <div class="room-bottom">
-            <div class="room-price">
-              <span class="caption" data-i18n="rooms.from">à partir de</span>
-              <span class="room-price-v">165 €</span>
-              <span class="caption" data-i18n="rooms.night">/ nuit</span>
+            <div class="room-text">
+              <div class="room-tag caption" data-i18n="rooms.rouge.tag">Rez-de-chaussée · vue oliveraie</div>
+              <h2 class="display-2">Chambre Rouge</h2>
+              <p class="lede" data-i18n="rooms.rouge.lede">Notre chambre la plus lumineuse. Trois fenêtres plein sud,
+                ouvertes sur les oliviers. Pierre apparente, sol en tomettes, lit en lin écru.</p>
+              <div class="room-specs">
+                <div><span class="caption" data-i18n="rooms.spec.surface">Surface</span><span>22 m²</span></div>
+                <div><span class="caption" data-i18n="rooms.spec.capacity">Capacité</span><span
+                    data-i18n="rooms.rouge.capacity">2 personnes</span></div>
+                <div><span class="caption" data-i18n="rooms.spec.bed">Lit</span><span>Queen size · 160×200</span></div>
+                <div><span class="caption" data-i18n="rooms.spec.view">Vue</span><span
+                    data-i18n="rooms.rouge.view">Oliveraie · sud</span></div>
+                <div><span class="caption" data-i18n="rooms.spec.amenities">Équipements</span><span
+                    data-i18n="rooms.rouge.amenities">Climatisation · WiFi · Coffre</span></div>
+                <div><span class="caption" data-i18n="rooms.spec.breakfast">Petit-déj</span><span
+                    data-i18n="rooms.rouge.breakfast">Inclus</span></div>
+              </div>
+              <div class="room-bottom">
+                <div class="room-price">
+                  <span class="caption" data-i18n="rooms.from">à partir de</span>
+                  <span class="room-price-v">145 €</span>
+                  <span class="caption" data-i18n="rooms.night">/ nuit</span>
+                </div>
+                <a class="btn btn-ink" href="contact.html#book-rouge">
+                  <span data-i18n="rooms.book">Réserver cette chambre</span>
+                  <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M2 7h10M8 3l4 4-4 4" />
+                  </svg>
+                </a>
+              </div>
             </div>
-            <a class="btn btn-ink" href="contact.html#book-bleue-onde">
-              <span data-i18n="rooms.book">Réserver cette chambre</span>
-              <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
-            </a>
+          </div>
+        </article>
+
+        <!-- BLEUE -->
+        <article class="room room-rev" id="bleue">
+          <div class="room-block reveal delay-1">
+            <div class="room-imgs">
+              <img class="room-main" src="assets/images/chambres/blue_room_bedroom_wrought_iron_headboard_full.jpg"
+                alt="Chambre Bleue · lit en fer forgé">
+              <img class="room-sec" src="assets/images/chambres/blue_room_sitting_area_blue_chairs.jpg"
+                alt="Chambre Bleue · coin salon">
+              <img class="room-sec" src="assets/images/chambres/blue_room_bathroom_grey_tiles_wooden_vanity.jpg"
+                alt="Salle de bain · carrelage gris et meuble bois">
+            </div>
+            <div class="room-text">
+              <div class="room-tag caption" data-i18n="rooms.bleue.tag">1er étage · terrasse privée</div>
+              <h2 class="display-2">Chambre Bleue</h2>
+              <p class="lede" data-i18n="rooms.bleue.lede">La plus calme. Au bout du couloir, donnant sur sa propre
+                terrasse à l'ombre du grand platane. Notre chambre préférée à l'heure de la sieste.</p>
+              <div class="room-specs">
+                <div><span class="caption" data-i18n="rooms.spec.surface">Surface</span><span>28 m² + 12 m²
+                    terrasse</span></div>
+                <div><span class="caption" data-i18n="rooms.spec.capacity">Capacité</span><span
+                    data-i18n="rooms.bleue.capacity">2 personnes</span></div>
+                <div><span class="caption" data-i18n="rooms.spec.bed">Lit</span><span>King size · 180×200</span></div>
+                <div><span class="caption" data-i18n="rooms.spec.view">Vue</span><span data-i18n="rooms.bleue.view">Parc
+                    · platanes</span></div>
+                <div><span class="caption" data-i18n="rooms.spec.amenities">Équipements</span><span
+                    data-i18n="rooms.bleue.amenities">Climatisation · WiFi · Bouilloire</span></div>
+                <div><span class="caption" data-i18n="rooms.spec.breakfast">Petit-déj</span><span
+                    data-i18n="rooms.bleue.breakfast">Inclus · servable en chambre</span></div>
+              </div>
+              <div class="room-bottom">
+                <div class="room-price">
+                  <span class="caption" data-i18n="rooms.from">à partir de</span>
+                  <span class="room-price-v">165 €</span>
+                  <span class="caption" data-i18n="rooms.night">/ nuit</span>
+                </div>
+                <a class="btn btn-ink" href="contact.html#book-bleue">
+                  <span data-i18n="rooms.book">Réserver cette chambre</span>
+                  <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M2 7h10M8 3l4 4-4 4" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ROSE -->
+        <article class="room" id="rose">
+          <div class="room-block reveal delay-1">
+            <div class="room-imgs">
+              <img class="room-main" src="assets/images/chambres/pink_room_bedroom_pink_floral_bed_and_dresser.jpg"
+                alt="Chambre Rose · lit fleuri et commode">
+              <img class="room-sec" src="assets/images/chambres/pink_room_bedroom_pink_floral_mirrored_armoire.jpg"
+                alt="Chambre Rose · armoire à miroir">
+              <img class="room-sec" src="assets/images/chambres/pink_room_bathroom_pink_diamond_tiles_shower.jpg"
+                alt="Salle de bain · carrelage diamant rose">
+            </div>
+            <div class="room-text">
+              <div class="room-tag caption" data-i18n="rooms.rose.tag">Combles · sous les poutres</div>
+              <h2 class="display-2">Chambre Rose</h2>
+              <p class="lede" data-i18n="rooms.rose.lede">Une alcôve sous les toits, au calme. Poutres d'origine,
+                lucarne sur le ciel, sol en chêne ciré. Idéal pour les couples qui aiment se cacher du monde.</p>
+              <div class="room-specs">
+                <div><span class="caption" data-i18n="rooms.spec.surface">Surface</span><span>24 m²</span></div>
+                <div><span class="caption" data-i18n="rooms.spec.capacity">Capacité</span><span
+                    data-i18n="rooms.rose.capacity">2 personnes</span></div>
+                <div><span class="caption" data-i18n="rooms.spec.bed">Lit</span><span>Queen size · 160×200</span></div>
+                <div><span class="caption" data-i18n="rooms.spec.view">Vue</span><span
+                    data-i18n="rooms.rose.view">Collines · ouest</span></div>
+                <div><span class="caption" data-i18n="rooms.spec.amenities">Équipements</span><span
+                    data-i18n="rooms.rose.amenities">Ventilateur · WiFi · Bureau</span></div>
+                <div><span class="caption" data-i18n="rooms.spec.breakfast">Petit-déj</span><span
+                    data-i18n="rooms.rose.breakfast">Inclus</span></div>
+              </div>
+              <div class="room-bottom">
+                <div class="room-price">
+                  <span class="caption" data-i18n="rooms.from">à partir de</span>
+                  <span class="room-price-v">155 €</span>
+                  <span class="caption" data-i18n="rooms.night">/ nuit</span>
+                </div>
+                <a class="btn btn-ink" href="contact.html#book-rose">
+                  <span data-i18n="rooms.book">Réserver cette chambre</span>
+                  <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M2 7h10M8 3l4 4-4 4" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- GRISE -->
+        <article class="room room-rev" id="grise">
+          <div class="room-block reveal delay-1">
+            <div class="room-imgs">
+              <img class="room-main" src="assets/images/chambres/grey_room_bedroom_double_bed_vintage_love_seat.jpg"
+                alt="Chambre Grise · lit double et canapé vintage">
+              <img class="room-sec" src="assets/images/chambres/grey_room_bedroom_twin_beds_blue_quilts.jpg"
+                alt="Chambre Grise · lits simples avec courtepointes bleues">
+              <img class="room-sec"
+                src="assets/images/chambres/grey_room_bathroom_light_blue_tiles_shower_and_toilet.jpg"
+                alt="Salle de bain · carrelage bleu clair">
+            </div>
+            <div class="room-text">
+              <div class="room-tag caption" data-i18n="rooms.grise.tag">Suite familiale · 2 pièces</div>
+              <h2 class="display-2">Chambre Grise</h2>
+              <p class="lede" data-i18n="rooms.grise.lede">La plus grande, conçue pour les familles. Deux pièces
+                communicantes, salle de bain partagée, un dressing. Vue sur la haie de cyprès et les collines.</p>
+              <div class="room-specs">
+                <div><span class="caption" data-i18n="rooms.spec.surface">Surface</span><span>36 m² · 2 pièces</span>
+                </div>
+                <div><span class="caption" data-i18n="rooms.spec.capacity">Capacité</span><span
+                    data-i18n="rooms.grise.capacity">4 personnes (2 + 2)</span></div>
+                <div><span class="caption" data-i18n="rooms.spec.beds">Lits</span><span>1 King + 2 simples 90×190</span>
+                </div>
+                <div><span class="caption" data-i18n="rooms.spec.view">Vue</span><span data-i18n="rooms.grise.view">Haie
+                    de cyprès · est</span></div>
+                <div><span class="caption" data-i18n="rooms.spec.amenities">Équipements</span><span
+                    data-i18n="rooms.grise.amenities">Climatisation · WiFi · Lit bébé sur dem.</span></div>
+                <div><span class="caption" data-i18n="rooms.spec.breakfast">Petit-déj</span><span
+                    data-i18n="rooms.grise.breakfast">Inclus (enfants -50 %)</span></div>
+              </div>
+              <div class="room-bottom">
+                <div class="room-price">
+                  <span class="caption" data-i18n="rooms.from">à partir de</span>
+                  <span class="room-price-v">210 €</span>
+                  <span class="caption" data-i18n="rooms.night">/ nuit</span>
+                </div>
+                <a class="btn btn-ink" href="contact.html#book-grise">
+                  <span data-i18n="rooms.book">Réserver cette chambre</span>
+                  <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M2 7h10M8 3l4 4-4 4" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- BLEUE ONDE -->
+        <article class="room" id="bleue-onde">
+          <div class="room-block reveal delay-1">
+            <div class="room-imgs">
+              <img class="room-main" src="assets/images/chambres/wave_blue_room_bedroom_blue_walls_canopy_bed_full.jpg"
+                alt="Chambre Bleue Onde · lit à baldaquin et murs bleus">
+              <img class="room-sec" src="assets/images/chambres/wave_blue_room_bedroom_blue_walls_canopy_bed_door.jpg"
+                alt="Chambre Bleue Onde · vue depuis l'entrée">
+              <img class="room-sec" src="assets/images/chambres/wave_blue_room_bathroom_blue_tiles_vintage_mirror.jpg"
+                alt="Salle de bain · carrelage bleu et miroir vintage">
+            </div>
+            <div class="room-text">
+              <div class="room-tag caption" data-i18n="rooms.onde.tag">1er étage · cheminée fonctionnelle</div>
+              <h2 class="display-2">Chambre Bleue Onde</h2>
+              <p class="lede" data-i18n="rooms.onde.lede">L'ancienne chambre du maître de maison. Cheminée d'origine,
+                allumée d'octobre à mars sur demande. Le coin de lecture est devenu notre QG préféré l'hiver.</p>
+              <div class="room-specs">
+                <div><span class="caption" data-i18n="rooms.spec.surface">Surface</span><span>26 m²</span></div>
+                <div><span class="caption" data-i18n="rooms.spec.capacity">Capacité</span><span
+                    data-i18n="rooms.onde.capacity">2 personnes</span></div>
+                <div><span class="caption" data-i18n="rooms.spec.bed">Lit</span><span>King size · 180×200</span></div>
+                <div><span class="caption" data-i18n="rooms.spec.view">Vue</span><span data-i18n="rooms.onde.view">Allée
+                    de platanes · nord</span></div>
+                <div><span class="caption" data-i18n="rooms.spec.amenities">Équipements</span><span
+                    data-i18n="rooms.onde.amenities">Cheminée · WiFi · Coffre</span></div>
+                <div><span class="caption" data-i18n="rooms.spec.breakfast">Petit-déj</span><span
+                    data-i18n="rooms.onde.breakfast">Inclus</span></div>
+              </div>
+              <div class="room-bottom">
+                <div class="room-price">
+                  <span class="caption" data-i18n="rooms.from">à partir de</span>
+                  <span class="room-price-v">165 €</span>
+                  <span class="caption" data-i18n="rooms.night">/ nuit</span>
+                </div>
+                <a class="btn btn-ink" href="contact.html#book-bleue-onde">
+                  <span data-i18n="rooms.book">Réserver cette chambre</span>
+                  <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M2 7h10M8 3l4 4-4 4" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================== INCLUS ===================== -->
+    <section class="included section-pad-sm">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow" data-i18n="rooms.incl.brow">Toujours inclus</div>
+            <h2 class="display-2" data-i18n="rooms.incl.h2">Le confort, <em>sans calcul.</em></h2>
+          </div>
+          <div class="section-head-right">
+            <p class="lede" data-i18n="rooms.incl.lede">Les petites attentions sont la moindre des choses. Voici tout ce
+              qui est compris dans chaque chambre, sans supplément, sans astérisque.</p>
           </div>
         </div>
+
+        <ul class="incl-grid">
+          <li><span><strong data-i18n="rooms.incl.1.h">Petit-déjeuner</strong><br><span
+                data-i18n="rooms.incl.1.p">Confitures maison, fruits du potager, pain de Pourrières, café Lomi, jus
+                pressé.</span></span></li>
+          <li><span><strong data-i18n="rooms.incl.2.h">Linge de lit en
+                lin</strong><br><span data-i18n="rooms.incl.2.p">Lavé en France, changé tous les trois jours ou sur
+                demande.</span></span></li>
+          <li><span><strong data-i18n="rooms.incl.3.h">WiFi fibre</strong><br><span
+                data-i18n="rooms.incl.3.p">500 Mb/s · partout dans la maison et au bord de la piscine.</span></span>
+          </li>
+          <li><span><strong data-i18n="rooms.incl.4.h">Climatisation</strong><br><span
+                data-i18n="rooms.incl.4.p">Réversible dans 4 chambres sur 5. Ventilateur silencieux dans la
+                5ᵉ.</span></span></li>
+          <li><span><strong data-i18n="rooms.incl.5.h">Parking</strong><br><span
+                data-i18n="rooms.incl.5.p">Dans la cour ombragée, accès direct depuis la départementale.</span></span>
+          </li>
+          <li><span><strong data-i18n="rooms.incl.6.h">Piscine
+                chauffée</strong><br><span data-i18n="rooms.incl.6.p">Ouverte d'avril à octobre, 28° toute la
+                saison.</span></span></li>
+          <li><span><strong data-i18n="rooms.incl.7.h">Conseils
+                sur-mesure</strong><br><span data-i18n="rooms.incl.7.p">Cartes, sentiers, restaurants, vignerons.
+                Demandez-nous tout.</span></span></li>
+          <li><span><strong data-i18n="rooms.incl.8.h">Apéro de
+                bienvenue</strong><br><span data-i18n="rooms.incl.8.p">Un verre de rosé du domaine voisin, le soir de
+                votre arrivée.</span></span></li>
+        </ul>
       </div>
-    </article>
+    </section>
 
-  </div>
-</section>
-
-<!-- ===================== INCLUS ===================== -->
-<section class="included section-pad-sm">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <div class="eyebrow" data-i18n="rooms.incl.brow">Toujours inclus</div>
-        <h2 class="display-2" data-i18n="rooms.incl.h2">Le confort, <em>sans calcul.</em></h2>
+    <!-- ===================== CTA ===================== -->
+    <section class="final section-pad">
+      <div class="wrap" style="text-align: center;">
+        <div class="eyebrow reveal" style="justify-content: center;" data-i18n="rooms.cta.brow">Réservation</div>
+        <h2 class="display-1 reveal delay-1" style="max-width: 22ch; margin: var(--s-5) auto;" data-i18n="rooms.cta.h2">
+          Une chambre <em>vous tente ?</em></h2>
+        <p class="lede reveal delay-2" style="max-width: 50ch; margin: 0 auto var(--s-6);" data-i18n="rooms.cta.lede">
+          Indiquez-nous vos dates et la chambre qui vous fait envie. Nous répondons sous 24 h.</p>
+        <a class="btn btn-primary btn-lg reveal delay-3" href="contact.html">
+          <span data-i18n="rooms.cta.btn">Demander une réservation</span>
+          <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M2 7h10M8 3l4 4-4 4" />
+          </svg>
+        </a>
       </div>
-      <div class="section-head-right">
-        <p class="lede" data-i18n="rooms.incl.lede">Les petites attentions sont la moindre des choses. Voici tout ce qui est compris dans chaque chambre, sans supplément, sans astérisque.</p>
-      </div>
-    </div>
+    </section>
 
-    <ul class="incl-grid">
-      <li><span class="incl-num">01</span><span><strong data-i18n="rooms.incl.1.h">Petit-déjeuner</strong><br><span data-i18n="rooms.incl.1.p">Confitures maison, fruits du potager, pain de Pourrières, café Lomi, jus pressé.</span></span></li>
-      <li><span class="incl-num">02</span><span><strong data-i18n="rooms.incl.2.h">Linge de lit en lin</strong><br><span data-i18n="rooms.incl.2.p">Lavé en France, changé tous les trois jours ou sur demande.</span></span></li>
-      <li><span class="incl-num">03</span><span><strong data-i18n="rooms.incl.3.h">WiFi fibre</strong><br><span data-i18n="rooms.incl.3.p">500 Mb/s · partout dans la maison et au bord de la piscine.</span></span></li>
-      <li><span class="incl-num">04</span><span><strong data-i18n="rooms.incl.4.h">Climatisation</strong><br><span data-i18n="rooms.incl.4.p">Réversible dans 4 chambres sur 5. Ventilateur silencieux dans la 5ᵉ.</span></span></li>
-      <li><span class="incl-num">05</span><span><strong data-i18n="rooms.incl.5.h">Parking</strong><br><span data-i18n="rooms.incl.5.p">Dans la cour ombragée, accès direct depuis la départementale.</span></span></li>
-      <li><span class="incl-num">06</span><span><strong data-i18n="rooms.incl.6.h">Piscine chauffée</strong><br><span data-i18n="rooms.incl.6.p">Ouverte d'avril à octobre, 28° toute la saison.</span></span></li>
-      <li><span class="incl-num">07</span><span><strong data-i18n="rooms.incl.7.h">Conseils sur-mesure</strong><br><span data-i18n="rooms.incl.7.p">Cartes, sentiers, restaurants, vignerons. Demandez-nous tout.</span></span></li>
-      <li><span class="incl-num">08</span><span><strong data-i18n="rooms.incl.8.h">Apéro de bienvenue</strong><br><span data-i18n="rooms.incl.8.p">Un verre de rosé du domaine voisin, le soir de votre arrivée.</span></span></li>
-    </ul>
-  </div>
-</section>
+  </main>
 
-<!-- ===================== CTA ===================== -->
-<section class="final section-pad">
-  <div class="wrap" style="text-align: center;">
-    <div class="eyebrow reveal" style="justify-content: center;" data-i18n="rooms.cta.brow">Réservation</div>
-    <h2 class="display-1 reveal delay-1" style="max-width: 22ch; margin: var(--s-5) auto;" data-i18n="rooms.cta.h2">Une chambre <em>vous tente ?</em></h2>
-    <p class="lede reveal delay-2" style="max-width: 50ch; margin: 0 auto var(--s-6);" data-i18n="rooms.cta.lede">Indiquez-nous vos dates et la chambre qui vous fait envie. Nous répondons sous 24 h.</p>
-    <a class="btn btn-primary btn-lg reveal delay-3" href="contact.html">
-      <span data-i18n="rooms.cta.btn">Demander une réservation</span>
-      <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
-    </a>
-  </div>
-</section>
+  <div data-slot="footer"></div>
 
-</main>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js"
+    integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"
+    integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"
+    integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y"
+    crossorigin="anonymous"></script>
 
-<div data-slot="footer"></div>
-
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-
-<script src="i18n.js"></script>
-<script src="partials.js"></script>
-<script src="shared.js"></script>
-<script type="text/babel" src="tweaks-panel.jsx"></script>
-<script type="text/babel" src="tweaks.jsx"></script>
+  <script src="i18n.js"></script>
+  <script src="partials.js"></script>
+  <script src="shared.js"></script>
+  <script type="text/babel" src="tweaks-panel.jsx"></script>
+  <script type="text/babel" src="tweaks.jsx"></script>
 </body>
+
 </html>

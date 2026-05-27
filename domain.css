@@ -4,7 +4,7 @@
 
 /* Page hero (used on most inner pages) */
 .page-hero {
-  padding: 8.125rem 0 var(--s-7);
+  padding: 2rem 0 var(--s-7);
   background: var(--bg);
   border-bottom: 1px solid var(--line-soft);
   position: relative;
@@ -15,9 +15,9 @@
 }
 .page-hero-grid {
   display: grid;
-  grid-template-columns: 7fr 5fr;
-  gap: var(--s-9);
-  align-items: end;
+  grid-template-columns: 6fr 5fr;
+  gap: var(--s-6);
+  align-items: center;
 }
 .page-hero-grid .eyebrow {
   margin-bottom: var(--s-5);
@@ -30,7 +30,10 @@
   max-width: 48ch;
 }
 .page-hero-img {
-  align-self: stretch;
+  align-self: center;
+  max-height: calc(100vh - 12rem);
+  overflow: hidden;
+  border-radius: var(--radius);
 }
 
 @media (max-width: 55rem) {
@@ -56,7 +59,7 @@
   border-top: 1px solid var(--line);
 }
 .tl-item {
-  padding: var(--s-5) var(--s-4) 0 0;
+  padding: var(--s-5) var(--s-4) 0 var(--s-4);
   border-right: 1px solid var(--line-soft);
   position: relative;
 }
@@ -158,16 +161,18 @@
 .page-hero-img img {
   width: 100%;
   height: 100%;
+  max-height: calc(100vh - 12rem);
   object-fit: cover;
   display: block;
   border-radius: var(--radius);
 }
 .hosts-portrait img {
-  width: 110%;
-  height: 110%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   display: block;
   border-radius: var(--radius);
+  max-height: 35rem;
 }
 
 @media (max-width: 55rem) {
@@ -223,7 +228,7 @@
   display: grid;
   grid-template-columns: 5fr 6fr;
   gap: var(--s-9);
-  align-items: start;
+  align-items: center;
 }
 .hosts-portrait {
   position: sticky;

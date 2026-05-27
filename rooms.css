@@ -3,7 +3,6 @@
    ============================================================ */
 
 .rooms-key {
-  border-top: 1px solid var(--line);
   padding-top: var(--s-5);
   display: flex;
   flex-direction: column;
@@ -40,7 +39,7 @@
   padding-top: var(--s-7);
   margin-top: var(--s-8);
 }
-.room:first-of-type { margin-top: 0; }
+.room:first-of-type { margin-top: 0; border-top: 0; padding-top: 0; }
 .room-num {
   margin-bottom: var(--s-5);
   color: var(--terracotta);
@@ -126,7 +125,7 @@
 .incl-grid li {
   display: flex;
   gap: var(--s-3);
-  padding: var(--s-5) var(--s-4) var(--s-5) 0;
+  padding: var(--s-5) var(--s-4);
   border-right: 1px solid var(--line-soft);
   border-bottom: 1px solid var(--line-soft);
 }

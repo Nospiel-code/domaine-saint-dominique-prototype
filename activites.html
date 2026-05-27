@@ -1,417 +1,564 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Activités &amp; Alentours · Domaine Saint Dominique</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=DM+Serif+Display:ital@0;1&family=Karla:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=fallback" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="home.css">
-<link rel="stylesheet" href="domain.css">
-<link rel="stylesheet" href="activities.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Activités &amp; Alentours · Domaine Saint Dominique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=DM+Serif+Display:ital@0;1&family=Karla:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=fallback"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="domain.css">
+  <link rel="stylesheet" href="activities.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 </head>
+
 <body data-page="activities" data-screen-label="04 Activités">
-<div data-slot="header"></div>
+  <div data-slot="header"></div>
 
-<main>
+  <main>
 
-<!-- ===================== PAGE HERO ===================== -->
-<section class="page-hero">
-  <div class="wrap">
-    <div class="crumb reveal">04 — Activités &amp; Alentours</div>
-    <div class="page-hero-grid">
-      <div>
-        <div class="eyebrow reveal" data-i18n="act.brow">Activités &amp; Alentours</div>
-        <h1 class="display-1 reveal delay-1" data-i18n="act.h1">La Provence Verte, à votre rythme.</h1>
-        <p class="lede reveal delay-2" data-i18n="act.lede">Le domaine est posé à mi-chemin entre la Sainte-Victoire, la Sainte-Baume et les Gorges du Verdon. Voici nos suggestions — celles qu'on donne à nos hôtes, classées par envie.</p>
+    <!-- ===================== PAGE HERO ===================== -->
+    <section class="page-hero">
+      <div class="wrap">
+        <div class="page-hero-grid">
+          <div>
+            <div class="eyebrow reveal" data-i18n="act.brow">Activités &amp; Alentours</div>
+            <h1 class="display-1 reveal delay-1" data-i18n="act.h1">La Provence Verte, à votre rythme.</h1>
+            <p class="lede reveal delay-2" data-i18n="act.lede">Le domaine est posé à mi-chemin entre la
+              Sainte-Victoire, la Sainte-Baume et les Gorges du Verdon. Voici nos suggestions — celles qu'on donne à nos
+              hôtes, classées par envie.</p>
+          </div>
+          <div class="map-card reveal delay-3">
+            <div class="map-illus">
+              <div id="act-map"></div>
+              <div class="map-compass" aria-hidden="true">
+                <svg viewBox="-18 -18 36 36" width="36" height="36" fill="none">
+                  <circle r="14" stroke="#7a7466" stroke-width="0.6"/>
+                  <path d="M0 -10 L3.5 0 L0 10 L-3.5 0 Z" fill="#7a7466"/>
+                  <text y="-16" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7" fill="#7a7466">N</text>
+                </svg>
+              </div>
+            </div>
+            <div class="map-meta">
+              <div class="map-coord">
+                <span class="caption" data-i18n="act.map.pos.l">Position</span>
+                <span>43°31'08"N · 5°50'42"E</span>
+              </div>
+              <div class="map-coord">
+                <span class="caption" data-i18n="act.map.alt.l">Altitude</span>
+                <span>312 m</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="map-card reveal delay-3">
-        <div class="map-illus">
-          <svg viewBox="0 0 320 360" fill="none">
-            <!-- subtle map: arcs of hills + points -->
-            <path d="M 10 180 Q 80 120, 160 160 T 310 180" stroke="#d9d0bd" stroke-width="1"/>
-            <path d="M 10 220 Q 100 170, 180 210 T 310 220" stroke="#d9d0bd" stroke-width="1"/>
-            <path d="M 10 260 Q 90 220, 170 250 T 310 260" stroke="#d9d0bd" stroke-width="1"/>
-            <!-- DSD marker centre -->
-            <g transform="translate(160 180)">
-              <circle r="6" fill="#b85a3d"/>
-              <circle r="14" fill="none" stroke="#b85a3d" stroke-width="0.8"/>
-              <text x="22" y="4" font-family="Cormorant Garamond" font-style="italic" font-size="13" fill="#1f1d18">Domaine SD</text>
-            </g>
-            <!-- key sites -->
-            <g font-family="JetBrains Mono" font-size="9" letter-spacing="1" fill="#4a463c">
-              <g transform="translate(60 70)"><circle r="3" fill="#6b7547"/><text x="8" y="3">Sainte-Baume</text></g>
-              <g transform="translate(70 290)"><circle r="3" fill="#6b7547"/><text x="8" y="3">Sainte-Victoire</text></g>
-              <g transform="translate(240 100)"><circle r="3" fill="#6b7547"/><text x="8" y="3">Verdon</text></g>
-              <g transform="translate(40 200)"><circle r="3" fill="#6b7547"/><text x="-8" y="3" text-anchor="end">Aix</text></g>
-              <g transform="translate(240 220)"><circle r="3" fill="#6b7547"/><text x="8" y="3">Cotignac</text></g>
-              <g transform="translate(120 130)"><circle r="3" fill="#6b7547"/><text x="-8" y="3" text-anchor="end">St-Maximin</text></g>
-            </g>
-            <!-- compass -->
-            <g transform="translate(280 320)">
-              <circle r="14" fill="none" stroke="#7a7466" stroke-width="0.6"/>
-              <path d="M0 -10 L4 0 L0 10 L-4 0 Z" fill="#7a7466"/>
-              <text y="-18" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#7a7466">N</text>
-            </g>
+    </section>
+
+    <!-- ===================== CATEGORIES STRIP ===================== -->
+    <section class="cat-strip">
+      <div class="wrap">
+        <ul class="cat-list">
+          <li><a href="#rando" data-i18n="act.cat.1">Randonnée</a></li>
+          <li><a href="#nature" data-i18n="act.cat.2">Nature</a></li>
+          <li><a href="#patrimoine" data-i18n="act.cat.3">Patrimoine</a></li>
+          <li><a href="#oeno" data-i18n="act.cat.4">Œnotourisme</a></li>
+          <li><a href="#sport" data-i18n="act.cat.5">Sports</a></li>
+          <li><a href="#marches" data-i18n="act.cat.6">Marchés</a></li>
+          <li><a href="#aix" data-i18n="act.cat.7">Aix-en-Provence</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== 01 · RANDONNÉE ===================== -->
+    <section id="rando" class="cat-section section-pad">
+      <div class="wrap cat-grid">
+        <aside class="cat-aside reveal">
+          <div class="caption" data-i18n="act.rando.cap">Randonnée</div>
+          <h2 class="display-2" data-i18n="act.rando.h2">400 km de sentiers <em>balisés.</em></h2>
+          <p class="body" data-i18n="act.rando.p">La Provence Verte est traversée par le GR9, le GR99, et un maillage de
+            sentiers locaux. Nous gardons à la maison une dizaine de topos à emporter, et des cartes IGN sur tablette.
+          </p>
+          <div class="cat-meta">
+            <div><span class="caption" data-i18n="act.rando.meta.dist.l">Distance</span><span
+                data-i18n="act.rando.meta.dist.v">2 → 22 km</span></div>
+            <div><span class="caption" data-i18n="act.rando.meta.season.l">Saison</span><span
+                data-i18n="act.rando.meta.season.v">Toute l'année · meilleur en avril-juin</span></div>
+            <div><span class="caption" data-i18n="act.rando.meta.topos.l">Topos</span><span
+                data-i18n="act.rando.meta.topos.v">Disponibles à l'accueil</span></div>
+          </div>
+        </aside>
+        <div class="cat-items reveal delay-1">
+          <a class="cat-item" href="#">
+            <div class="cat-item-img"><img src="assets/images/activites/garrigue_provence.jpg"
+                alt="Garrigue provençale sur les collines de Seillons"></div>
+            <div class="cat-item-body">
+              <h4 data-i18n="act.rando.1.h">Tour des Collines de Seillons</h4>
+              <p data-i18n="act.rando.1.p">La boucle qui part de la maison. Trois heures, panorama sur la Sainte-Baume.
+              </p>
+              <div class="cat-item-meta"><span>9 km</span><span>+ 280 m</span><span>3 h</span></div>
+            </div>
+          </a>
+          <a class="cat-item" href="#">
+            <div class="cat-item-img"><img src="assets/images/activites/argens_riviere.jpg" alt="La rivière Argens">
+            </div>
+            <div class="cat-item-body">
+              <h4 data-i18n="act.rando.2.h">Source de l'Argens</h4>
+              <p data-i18n="act.rando.2.p">Plus court, ombragé, finit dans un bassin d'eau cristalline où l'on se
+                baigne.</p>
+              <div class="cat-item-meta"><span>5 km</span><span>+ 120 m</span><span>1 h 30</span></div>
+            </div>
+          </a>
+          <a class="cat-item" href="#">
+            <div class="cat-item-img"><img src="assets/images/activites/sainte_baume_panorama.jpg"
+                alt="Panorama depuis l'esplanade de la Sainte-Baume"></div>
+            <div class="cat-item-body">
+              <h4 data-i18n="act.rando.3.h">Massif de la Sainte-Baume</h4>
+              <p data-i18n="act.rando.3.p">Un classique exigeant. Forêt centenaire, grotte de Marie-Madeleine, vue sur
+                la mer.</p>
+              <div class="cat-item-meta"><span>14 km</span><span>+ 620 m</span><span>5 h</span></div>
+            </div>
+          </a>
+          <a class="cat-item" href="#">
+            <div class="cat-item-img"><img src="assets/images/activites/sainte_victoire.jpg"
+                alt="Montagne Sainte-Victoire"></div>
+            <div class="cat-item-body">
+              <h4 data-i18n="act.rando.4.h">Croix de Provence</h4>
+              <p data-i18n="act.rando.4.p">L'iconique Sainte-Victoire de Cézanne. Sportif mais accessible avec un peu
+                d'eau.</p>
+              <div class="cat-item-meta"><span>11 km</span><span>+ 580 m</span><span>4 h 30</span></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 02 · NATURE ===================== -->
+    <section id="nature" class="cat-section section-pad" style="background: var(--paper);">
+      <div class="wrap cat-grid cat-grid-rev">
+        <div class="cat-items reveal">
+          <a class="cat-item" href="#">
+            <div class="cat-item-img"><img src="assets/images/activites/gorges_du_verdon.jpg" alt="Gorges du Verdon">
+            </div>
+            <div class="cat-item-body">
+              <h4 data-i18n="act.nature.1.h">Gorges du Verdon</h4>
+              <p data-i18n="act.nature.1.p">1h20 de route, et c'est l'un des plus grands canyons d'Europe. Eau
+                turquoise.</p>
+              <div class="cat-item-meta"><span>85 km</span><span>1 h 20</span></div>
+            </div>
+          </a>
+          <a class="cat-item" href="#">
+            <div class="cat-item-img"><img src="assets/images/activites/lac_sainte_croix.jpg"
+                alt="Lac de Sainte-Croix vue aérienne"></div>
+            <div class="cat-item-body">
+              <h4 data-i18n="act.nature.2.h">Lac de Sainte-Croix</h4>
+              <p data-i18n="act.nature.2.p">Pédalos, kayaks, baignade. La meilleure journée des hôtes avec enfants.</p>
+              <div class="cat-item-meta"><span>65 km</span><span>1 h 10</span></div>
+            </div>
+          </a>
+          <a class="cat-item" href="#">
+            <div class="cat-item-img"><img src="assets/images/activites/valensole_lavande.jpg"
+                alt="Lavandes sur le plateau de Valensole"></div>
+            <div class="cat-item-body">
+              <h4 data-i18n="act.nature.3.h">Plateau de Valensole</h4>
+              <p data-i18n="act.nature.3.p">La lavande, en juillet. Y aller au coucher du soleil, c'est l'heure magique.
+              </p>
+              <div class="cat-item-meta"><span>60 km</span><span>55 min</span></div>
+            </div>
+          </a>
+          <a class="cat-item" href="#">
+            <div class="cat-item-img"><img src="assets/images/activites/caramy_riviere.jpg"
+                alt="La rivière Caramy, baignade en Provence"></div>
+            <div class="cat-item-body">
+              <h4 data-i18n="act.nature.4.h">Source de l'Argens</h4>
+              <p data-i18n="act.nature.4.p">À dix minutes. On y va à pied. Quelques rochers plats pour le pique-nique.
+              </p>
+              <div class="cat-item-meta"><span>2,5 km</span><span>10 min voiture · 35 min à pied</span></div>
+            </div>
+          </a>
+        </div>
+        <aside class="cat-aside reveal delay-1">
+          <div class="caption" data-i18n="act.nature.cap">Nature</div>
+          <h2 class="display-2" data-i18n="act.nature.h2">L'eau, partout, <em>ou presque.</em></h2>
+          <p class="body" data-i18n="act.nature.p">Le Verdon, l'Argens, Sainte-Croix, la Sainte-Baume — quatre
+            rendez-vous nature à moins d'1h30. On vous prête glacière, serviettes et carte du coin.</p>
+          <div class="cat-meta">
+            <div><span class="caption" data-i18n="act.nature.meta.verdon.l">Verdon</span><span
+                data-i18n="act.nature.meta.verdon.v">1h20 · sportif</span></div>
+            <div><span class="caption" data-i18n="act.nature.meta.stecroix.l">Sainte-Croix</span><span
+                data-i18n="act.nature.meta.stecroix.v">1h10 · familial</span></div>
+            <div><span class="caption" data-i18n="act.nature.meta.argens.l">Argens</span><span
+                data-i18n="act.nature.meta.argens.v">10 min · à pied possible</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===================== 03 · PATRIMOINE ===================== -->
+    <section id="patrimoine" class="cat-section section-pad">
+      <div class="wrap cat-grid">
+        <aside class="cat-aside reveal">
+          <div class="caption" data-i18n="act.patri.cap">Patrimoine</div>
+          <h2 class="display-2" data-i18n="act.patri.h2">Mille ans <em>de pierres.</em></h2>
+          <p class="body" data-i18n="act.patri.p">De la basilique gothique de Saint-Maximin aux vestiges romains de
+            Seillons, en passant par Cotignac et son rocher de tuf — le coin a une longue mémoire.</p>
+        </aside>
+        <div class="cat-items reveal delay-1">
+          <a class="cat-item" href="#">
+            <div class="cat-item-img"><img src="assets/images/activites/basilique_saint_maximin.jpg"
+                alt="Basilique Sainte-Marie-Madeleine de Saint-Maximin"></div>
+            <div class="cat-item-body">
+              <h4 data-i18n="act.patri.1.h">Basilique Sainte-Marie-Madeleine</h4>
+              <p data-i18n="act.patri.1.p">Plus grand gothique de Provence, abritant les reliques de Marie-Madeleine.
+              </p>
+              <div class="cat-item-meta"><span data-i18n="act.patri.1.meta">St-Maximin · 5 km</span></div>
+            </div>
+          </a>
+          <a class="cat-item" href="#">
+            <div class="cat-item-img"><img src="assets/images/activites/cotignac_falaise.jpg"
+                alt="Cotignac et sa falaise de tuf"></div>
+            <div class="cat-item-body">
+              <h4 data-i18n="act.patri.2.h">Village de Cotignac</h4>
+              <p data-i18n="act.patri.2.p">Façades polychromes, rocher de tuf percé de grottes troglodytes, marché du
+                mardi.</p>
+              <div class="cat-item-meta"><span data-i18n="act.patri.2.meta">22 km</span></div>
+            </div>
+          </a>
+          <a class="cat-item" href="#">
+            <div class="cat-item-img"><img src="assets/images/activites/tourtour_panorama.jpg"
+                alt="Panorama de Tourtour"></div>
+            <div class="cat-item-body">
+              <h4 data-i18n="act.patri.3.h">Tourtour</h4>
+              <p data-i18n="act.patri.3.p">Classé « plus beaux villages de France ». À voir au coucher du soleil,
+                panorama jusqu'à la mer.</p>
+              <div class="cat-item-meta"><span data-i18n="act.patri.3.meta">50 km · 1h</span></div>
+            </div>
+          </a>
+          <a class="cat-item" href="#">
+            <div class="cat-item-img"><img src="assets/images/activites/seillons_eglise.jpg"
+                alt="Église de Seillons-Source-d'Argens"></div>
+            <div class="cat-item-body">
+              <h4 data-i18n="act.patri.4.h">Traces gallo-romaines de Seillons</h4>
+              <p data-i18n="act.patri.4.p">À deux pas du domaine. Traces gallo-romaines, céramiques antiques et tessons
+                de tegulae. Peu visité.</p>
+              <div class="cat-item-meta"><span data-i18n="act.patri.4.meta">1,5 km · à pied</span></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 04 · ŒNOTOURISME ===================== -->
+    <section id="oeno" class="cat-section section-pad" style="background: var(--paper);">
+      <div class="wrap cat-grid cat-grid-rev">
+        <div class="cat-items reveal">
+          <a class="cat-item" href="#">
+            <div class="cat-item-img"><img src="assets/images/activites/la_roquebrussanne_cave.jpg"
+                alt="Cave coopérative de La Roquebrussanne, village du Domaine du Loou"></div>
+            <div class="cat-item-body">
+              <h4 data-i18n="act.oeno.1.h">Domaine du Loou</h4>
+              <p data-i18n="act.oeno.1.p">Notre coup de cœur. Rosés gouleyants, blancs minéraux. Visite et dégustation
+                sur RDV.</p>
+              <div class="cat-item-meta"><span data-i18n="act.oeno.1.meta1">23 km</span><span
+                  data-i18n="act.oeno.1.meta2">Coteaux Varois</span></div>
+            </div>
+          </a>
+          <a class="cat-item" href="#">
+            <div class="cat-item-img"><img src="assets/images/activites/vignoble_cabanon.jpg"
+                alt="Cabanon et vignoble en Provence"></div>
+            <div class="cat-item-body">
+              <h4 data-i18n="act.oeno.2.h">Domaine de Saint-Mitre</h4>
+              <p data-i18n="act.oeno.2.p">À deux pas, en agriculture raisonnée HVE. Rouges fougueux et un cinsault
+                inattendu.</p>
+              <div class="cat-item-meta"><span data-i18n="act.oeno.2.meta1">14 km</span><span
+                  data-i18n="act.oeno.2.meta2">HVE</span></div>
+            </div>
+          </a>
+          <a class="cat-item" href="#">
+            <div class="cat-item-img"><img src="assets/images/activites/villecroze_troglodyte.jpg"
+                alt="Villecroze, village où se trouve le Château Thuerry"></div>
+            <div class="cat-item-body">
+              <h4 data-i18n="act.oeno.3.h">Château Thuerry</h4>
+              <p data-i18n="act.oeno.3.p">Beau domaine en Coteaux Varois, au cœur du Haut-Var. Rosés élégants, cave
+                ouverte à la visite.</p>
+              <div class="cat-item-meta"><span data-i18n="act.oeno.3.meta1">42 km</span><span
+                  data-i18n="act.oeno.3.meta2">Coteaux Varois</span></div>
+            </div>
+          </a>
+          <a class="cat-item" href="#">
+            <div class="cat-item-img"><img src="assets/images/activites/pourcieux_cave_coop.jpg"
+                alt="Cave coopérative de Pourcieux, Coteaux Varois en Provence"></div>
+            <div class="cat-item-body">
+              <h4 data-i18n="act.oeno.4.h">Route des Coteaux Varois</h4>
+              <p data-i18n="act.oeno.4.p">Onze vignerons accessibles à vélo depuis le domaine. Nous prêtons les VTC et
+                la carte.</p>
+              <div class="cat-item-meta"><span data-i18n="act.oeno.4.meta1">20 km de boucle</span><span
+                  data-i18n="act.oeno.4.meta2">Carte fournie</span></div>
+            </div>
+          </a>
+        </div>
+        <aside class="cat-aside reveal delay-1">
+          <div class="caption" data-i18n="act.oeno.cap">Œnotourisme</div>
+          <h2 class="display-2" data-i18n="act.oeno.h2">Onze vignerons <em>à vélo.</em></h2>
+          <p class="body" data-i18n="act.oeno.p">Le domaine était lui-même un vignoble jusqu'en 2003. C'est dire si le
+            sujet nous tient à cœur. Nous vous indiquons les bons.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===================== 05 · SPORTS ===================== -->
+    <section id="sport" class="cat-section section-pad">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <div class="caption" data-i18n="act.sport.cap">Sports &amp; activités</div>
+            <h2 class="display-2" data-i18n="act.sport.h2">Bouger, à votre <em>rythme.</em></h2>
+          </div>
+          <div class="section-head-right">
+            <p class="lede" data-i18n="act.sport.lede">Vélo, équitation, pêche, escalade, paddle. Nous travaillons avec
+              des prestataires de confiance, à dix minutes maximum.</p>
+          </div>
+        </div>
+        <div class="sport-grid">
+          <div class="sport-card">
+            <div class="sport-card-img">
+              <img src="https://images.unsplash.com/photo-1735216228027-fe31c23474ce?auto=format&fit=crop&w=800&q=80"
+                   alt="Cyclistes sur une route de Provence">
+            </div>
+            <div class="sport-card-body">
+              <h4 data-i18n="act.sport.1.h">Vélo &amp; VTC</h4>
+              <p data-i18n="act.sport.1.p">Quatre vélos à disposition. Pour aller plus loin, location chez Roue Libre à
+                Saint-Maximin.</p>
+              <div class="sport-tag" data-i18n="act.sport.1.tag">Inclus jusqu'à 4 personnes</div>
+            </div>
+          </div>
+          <div class="sport-card">
+            <div class="sport-card-img">
+              <img src="https://images.unsplash.com/photo-1626002644000-fdef78240836?auto=format&fit=crop&w=800&q=80"
+                   alt="Cavaliers en balade dans la pinède provençale">
+            </div>
+            <div class="sport-card-body">
+              <h4 data-i18n="act.sport.2.h">Équitation</h4>
+              <p data-i18n="act.sport.2.p">Le Mas du Forneou, à six kilomètres. Balades en pinède pour débutants et
+                confirmés.</p>
+              <div class="sport-tag" data-i18n="act.sport.2.tag">À partir de 45€/h</div>
+            </div>
+          </div>
+          <div class="sport-card">
+            <div class="sport-card-img">
+              <img src="assets/images/activites/argens_riviere.jpg"
+                   alt="L'Argens, rivière à quinze minutes du domaine">
+            </div>
+            <div class="sport-card-body">
+              <h4 data-i18n="act.sport.3.h">Pêche en rivière</h4>
+              <p data-i18n="act.sport.3.p">L'Argens, à quinze minutes à pied. Truites, ombres. Carte journalière à la
+                maison.</p>
+              <div class="sport-tag" data-i18n="act.sport.3.tag">Carte fournie · 12€/jour</div>
+            </div>
+          </div>
+          <div class="sport-card">
+            <div class="sport-card-img">
+              <img src="assets/images/activites/pont_galetas_kayak.jpg"
+                   alt="Pont du Galetas, lac de Sainte-Croix">
+            </div>
+            <div class="sport-card-body">
+              <h4 data-i18n="act.sport.4.h">Paddle &amp; kayak</h4>
+              <p data-i18n="act.sport.4.p">Sur le lac de Sainte-Croix. Loueurs sérieux au pont du Galetas, ouverts d'avril
+                à oct.</p>
+              <div class="sport-tag" data-i18n="act.sport.4.tag">1h · 25€</div>
+            </div>
+          </div>
+          <div class="sport-card">
+            <div class="sport-card-img">
+              <img src="assets/images/activites/escalade_verdon.jpg"
+                   alt="Escalade dans les gorges du Verdon">
+            </div>
+            <div class="sport-card-body">
+              <h4 data-i18n="act.sport.5.h">Escalade</h4>
+              <p data-i18n="act.sport.5.p">Site Sous la Roche, à Saint-Julien-le-Montagnier. Voies équipées du 4 au 7b.
+                Topos prêtés.</p>
+              <div class="sport-tag" data-i18n="act.sport.5.tag">Tous niveaux</div>
+            </div>
+          </div>
+          <div class="sport-card">
+            <div class="sport-card-img">
+              <img src="https://images.unsplash.com/photo-1696198265449-fe0cb54e2d63?auto=format&fit=crop&w=800&q=80"
+                   alt="Golf de la Sainte-Baume, vue aérienne">
+            </div>
+            <div class="sport-card-body">
+              <h4 data-i18n="act.sport.6.h">Golf</h4>
+              <p data-i18n="act.sport.6.p">Golf de la Sainte-Baume, 18 trous. Practice et 9 trous accessibles aux
+                débutants.</p>
+              <div class="sport-tag" data-i18n="act.sport.6.tag">20 km · réservation conseillée</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 06 · MARCHÉS ===================== -->
+    <section id="marches" class="cat-section section-pad" style="background: var(--ink); color: var(--bg);">
+      <div class="wrap">
+        <div class="section-head reveal" style="grid-template-columns: 1fr 1fr;">
+          <div>
+            <div class="caption" style="color: var(--sand);" data-i18n="act.marches.cap">Les marchés</div>
+            <h2 class="display-2" style="color: var(--bg);" data-i18n="act.marches.h2">Six matinées sur sept,
+              <em>quelque part autour.</em></h2>
+          </div>
+          <div class="section-head-right">
+            <p class="lede" style="color: rgba(255,255,255,.75);" data-i18n="act.marches.lede">Notre planning officieux
+              des marchés provençaux, dans un rayon de quinze kilomètres. À chacun son jour, sa saison, son fromager
+              préféré.</p>
+          </div>
+        </div>
+
+        <div class="markets-grid">
+          <div class="market">
+            <div class="market-day" data-i18n="act.marches.mon.day">Lundi</div>
+            <div class="market-place" data-i18n="act.marches.mon.place">Saint-Maximin-la-Sainte-Baume</div>
+            <div class="market-tag" data-i18n="act.marches.mon.tag">8 → 12h · petit marché de producteurs</div>
+          </div>
+          <div class="market">
+            <div class="market-day" data-i18n="act.marches.tue.day">Mardi</div>
+            <div class="market-place" data-i18n="act.marches.tue.place">Cotignac</div>
+            <div class="market-tag" data-i18n="act.marches.tue.tag">8 → 13h · Cours Gambetta · le plus animé</div>
+          </div>
+          <div class="market">
+            <div class="market-day" data-i18n="act.marches.wed.day">Mercredi</div>
+            <div class="market-place" data-i18n="act.marches.wed.place">Saint-Maximin-la-Sainte-Baume</div>
+            <div class="market-tag" data-i18n="act.marches.wed.tag">8 → 12h30 · grand marché · 150 exposants</div>
+          </div>
+          <div class="market">
+            <div class="market-day" data-i18n="act.marches.thu.day">Jeudi</div>
+            <div class="market-place" data-i18n="act.marches.thu.place">Aups</div>
+            <div class="market-tag" data-i18n="act.marches.thu.tag">8 → 12h · marché aux truffes noires (nov–fév)</div>
+          </div>
+          <div class="market market-off">
+            <div class="market-day" data-i18n="act.marches.fri.day">Vendredi</div>
+            <div class="market-place" data-i18n="act.marches.fri.place">Pas de marché</div>
+            <div class="market-tag" data-i18n="act.marches.fri.tag">— journée calme, idéale pour les domaines</div>
+          </div>
+          <div class="market">
+            <div class="market-day" data-i18n="act.marches.sat.day">Samedi</div>
+            <div class="market-place" data-i18n="act.marches.sat.place">Brignoles</div>
+            <div class="market-tag" data-i18n="act.marches.sat.tag">8 → 12h30 · grand marché du coin</div>
+          </div>
+          <div class="market">
+            <div class="market-day" data-i18n="act.marches.sun.day">Dimanche</div>
+            <div class="market-place" data-i18n="act.marches.sun.place">Barjols</div>
+            <div class="market-tag" data-i18n="act.marches.sun.tag">8 → 13h · charcuteries de montagne</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 07 · AIX ===================== -->
+    <section id="aix" class="cat-section section-pad">
+      <div class="wrap cat-grid">
+        <aside class="cat-aside reveal">
+          <div class="caption" data-i18n="act.aix.cap">Aix-en-Provence</div>
+          <h2 class="display-2" data-i18n="act.aix.h2">À 40 minutes, <em>une autre journée.</em></h2>
+          <p class="body" data-i18n="act.aix.p">Quand l'envie de ville se fait sentir : Aix, ses platanes, son cours
+            Mirabeau, son atelier Cézanne, ses concerts au Festival d'Art Lyrique. On y va, on y revient pour le dîner.
+          </p>
+          <div class="cat-meta">
+            <div><span class="caption" data-i18n="act.aix.meta.trajet.l">Trajet</span><span
+                data-i18n="act.aix.meta.trajet.v">40 min en voiture</span></div>
+            <div><span class="caption" data-i18n="act.aix.meta.festival.l">Festival</span><span
+                data-i18n="act.aix.meta.festival.v">Juillet · réserver tôt</span></div>
+            <div><span class="caption" data-i18n="act.aix.meta.marche.l">Notre marché</span><span
+                data-i18n="act.aix.meta.marche.v">Mardi, jeudi, samedi · pl. Richelme</span></div>
+          </div>
+        </aside>
+        <div class="cat-items reveal delay-1">
+          <a class="cat-item" href="#">
+            <div class="cat-item-img"><img src="assets/images/activites/cours_mirabeau.jpg"
+                alt="Le Cours Mirabeau, Aix-en-Provence"></div>
+            <div class="cat-item-body">
+              <h4 data-i18n="act.aix.1.h">Le Cours Mirabeau</h4>
+              <p data-i18n="act.aix.1.p">Café aux Deux Garçons. S'asseoir, ne rien faire, regarder les Aixois.</p>
+            </div>
+          </a>
+          <a class="cat-item" href="#">
+            <div class="cat-item-img"><img src="assets/images/activites/atelier_cezanne.jpg"
+                alt="Atelier Cézanne, Aix-en-Provence"></div>
+            <div class="cat-item-body">
+              <h4 data-i18n="act.aix.2.h">Atelier Cézanne</h4>
+              <p data-i18n="act.aix.2.p">Resté exactement comme il l'a laissé. Petite visite, grosse émotion.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="final section-pad">
+      <div class="wrap" style="text-align: center;">
+        <div class="eyebrow reveal" style="justify-content: center;" data-i18n="act.cta.brow">Sur place</div>
+        <h2 class="display-1 reveal delay-1" style="max-width: 24ch; margin: var(--s-5) auto;" data-i18n="act.cta.h2">On
+          vous compose <em>un programme.</em></h2>
+        <p class="lede reveal delay-2" style="max-width: 52ch; margin: 0 auto var(--s-6);" data-i18n="act.cta.lede">
+          Dites-nous vos envies (rando, calme, vin, kids, art…) et nous vous préparons un itinéraire à la carte avant
+          votre arrivée.</p>
+        <a class="btn btn-primary btn-lg reveal delay-3" href="contact.html">
+          <span data-i18n="act.cta.btn">Demander un programme</span>
+          <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M2 7h10M8 3l4 4-4 4" />
           </svg>
-        </div>
-        <div class="map-meta">
-          <div class="map-coord">
-            <span class="caption" data-i18n="act.map.pos.l">Position</span>
-            <span>43°31'08"N · 5°50'42"E</span>
-          </div>
-          <div class="map-coord">
-            <span class="caption" data-i18n="act.map.alt.l">Altitude</span>
-            <span>312 m</span>
-          </div>
-        </div>
+        </a>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ===================== CATEGORIES STRIP ===================== -->
-<section class="cat-strip">
-  <div class="wrap">
-    <ul class="cat-list">
-      <li><a href="#rando"><span>01</span> <span data-i18n="act.cat.1">Randonnée</span></a></li>
-      <li><a href="#nature"><span>02</span> <span data-i18n="act.cat.2">Nature</span></a></li>
-      <li><a href="#patrimoine"><span>03</span> <span data-i18n="act.cat.3">Patrimoine</span></a></li>
-      <li><a href="#oeno"><span>04</span> <span data-i18n="act.cat.4">Œnotourisme</span></a></li>
-      <li><a href="#sport"><span>05</span> <span data-i18n="act.cat.5">Sports</span></a></li>
-      <li><a href="#marches"><span>06</span> <span data-i18n="act.cat.6">Marchés</span></a></li>
-      <li><a href="#aix"><span>07</span> <span data-i18n="act.cat.7">Aix-en-Provence</span></a></li>
-    </ul>
-  </div>
-</section>
+  </main>
 
-<!-- ===================== 01 · RANDONNÉE ===================== -->
-<section id="rando" class="cat-section section-pad">
-  <div class="wrap cat-grid">
-    <aside class="cat-aside reveal">
-      <div class="caption" data-i18n="act.rando.cap">01 · Randonnée</div>
-      <h2 class="display-2" data-i18n="act.rando.h2">400 km de sentiers <em>balisés.</em></h2>
-      <p class="body" data-i18n="act.rando.p">La Provence Verte est traversée par le GR9, le GR99, et un maillage de sentiers locaux. Nous gardons à la maison une dizaine de topos à emporter, et des cartes IGN sur tablette.</p>
-      <div class="cat-meta">
-        <div><span class="caption" data-i18n="act.rando.meta.dist.l">Distance</span><span data-i18n="act.rando.meta.dist.v">2 → 22 km</span></div>
-        <div><span class="caption" data-i18n="act.rando.meta.season.l">Saison</span><span data-i18n="act.rando.meta.season.v">Toute l'année · meilleur en avril-juin</span></div>
-        <div><span class="caption" data-i18n="act.rando.meta.topos.l">Topos</span><span data-i18n="act.rando.meta.topos.v">Disponibles à l'accueil</span></div>
-      </div>
-    </aside>
-    <div class="cat-items reveal delay-1">
-      <a class="cat-item" href="#">
-        <div class="cat-item-img"><img src="assets/images/activites/garrigue_provence.jpg" alt="Garrigue provençale sur les collines de Seillons"></div>
-        <div class="cat-item-body">
-          <h4 data-i18n="act.rando.1.h">Tour des Collines de Seillons</h4>
-          <p data-i18n="act.rando.1.p">La boucle qui part de la maison. Trois heures, panorama sur la Sainte-Baume.</p>
-          <div class="cat-item-meta"><span>9 km</span><span>+ 280 m</span><span>3 h</span></div>
-        </div>
-      </a>
-      <a class="cat-item" href="#">
-        <div class="cat-item-img"><img src="assets/images/activites/argens_riviere.jpg" alt="La rivière Argens"></div>
-        <div class="cat-item-body">
-          <h4 data-i18n="act.rando.2.h">Source de l'Argens</h4>
-          <p data-i18n="act.rando.2.p">Plus court, ombragé, finit dans un bassin d'eau cristalline où l'on se baigne.</p>
-          <div class="cat-item-meta"><span>5 km</span><span>+ 120 m</span><span>1 h 30</span></div>
-        </div>
-      </a>
-      <a class="cat-item" href="#">
-        <div class="cat-item-img"><img src="assets/images/activites/sainte_baume_panorama.jpg" alt="Panorama depuis l'esplanade de la Sainte-Baume"></div>
-        <div class="cat-item-body">
-          <h4 data-i18n="act.rando.3.h">Massif de la Sainte-Baume</h4>
-          <p data-i18n="act.rando.3.p">Un classique exigeant. Forêt centenaire, grotte de Marie-Madeleine, vue sur la mer.</p>
-          <div class="cat-item-meta"><span>14 km</span><span>+ 620 m</span><span>5 h</span></div>
-        </div>
-      </a>
-      <a class="cat-item" href="#">
-        <div class="cat-item-img"><img src="assets/images/activites/sainte_victoire.jpg" alt="Montagne Sainte-Victoire"></div>
-        <div class="cat-item-body">
-          <h4 data-i18n="act.rando.4.h">Croix de Provence</h4>
-          <p data-i18n="act.rando.4.p">L'iconique Sainte-Victoire de Cézanne. Sportif mais accessible avec un peu d'eau.</p>
-          <div class="cat-item-meta"><span>11 km</span><span>+ 580 m</span><span>4 h 30</span></div>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
+  <div data-slot="footer"></div>
 
-<!-- ===================== 02 · NATURE ===================== -->
-<section id="nature" class="cat-section section-pad" style="background: var(--paper);">
-  <div class="wrap cat-grid cat-grid-rev">
-    <div class="cat-items reveal">
-      <a class="cat-item" href="#">
-        <div class="cat-item-img"><img src="assets/images/activites/gorges_du_verdon.jpg" alt="Gorges du Verdon"></div>
-        <div class="cat-item-body">
-          <h4 data-i18n="act.nature.1.h">Gorges du Verdon</h4>
-          <p data-i18n="act.nature.1.p">1h20 de route, et c'est l'un des plus grands canyons d'Europe. Eau turquoise.</p>
-          <div class="cat-item-meta"><span>85 km</span><span>1 h 20</span></div>
-        </div>
-      </a>
-      <a class="cat-item" href="#">
-        <div class="cat-item-img"><img src="assets/images/activites/lac_sainte_croix.jpg" alt="Lac de Sainte-Croix vue aérienne"></div>
-        <div class="cat-item-body">
-          <h4 data-i18n="act.nature.2.h">Lac de Sainte-Croix</h4>
-          <p data-i18n="act.nature.2.p">Pédalos, kayaks, baignade. La meilleure journée des hôtes avec enfants.</p>
-          <div class="cat-item-meta"><span>65 km</span><span>1 h 10</span></div>
-        </div>
-      </a>
-      <a class="cat-item" href="#">
-        <div class="cat-item-img"><img src="assets/images/activites/valensole_lavande.jpg" alt="Lavandes sur le plateau de Valensole"></div>
-        <div class="cat-item-body">
-          <h4 data-i18n="act.nature.3.h">Plateau de Valensole</h4>
-          <p data-i18n="act.nature.3.p">La lavande, en juillet. Y aller au coucher du soleil, c'est l'heure magique.</p>
-          <div class="cat-item-meta"><span>60 km</span><span>55 min</span></div>
-        </div>
-      </a>
-      <a class="cat-item" href="#">
-        <div class="cat-item-img"><img src="assets/images/activites/caramy_riviere.jpg" alt="La rivière Caramy, baignade en Provence"></div>
-        <div class="cat-item-body">
-          <h4 data-i18n="act.nature.4.h">Source de l'Argens</h4>
-          <p data-i18n="act.nature.4.p">À dix minutes. On y va à pied. Quelques rochers plats pour le pique-nique.</p>
-          <div class="cat-item-meta"><span>2,5 km</span><span>10 min voiture · 35 min à pied</span></div>
-        </div>
-      </a>
-    </div>
-    <aside class="cat-aside reveal delay-1">
-      <div class="caption" data-i18n="act.nature.cap">02 · Nature</div>
-      <h2 class="display-2" data-i18n="act.nature.h2">L'eau, partout, <em>ou presque.</em></h2>
-      <p class="body" data-i18n="act.nature.p">Le Verdon, l'Argens, Sainte-Croix, la Sainte-Baume — quatre rendez-vous nature à moins d'1h30. On vous prête glacière, serviettes et carte du coin.</p>
-      <div class="cat-meta">
-        <div><span class="caption" data-i18n="act.nature.meta.verdon.l">Verdon</span><span data-i18n="act.nature.meta.verdon.v">1h20 · sportif</span></div>
-        <div><span class="caption" data-i18n="act.nature.meta.stecroix.l">Sainte-Croix</span><span data-i18n="act.nature.meta.stecroix.v">1h10 · familial</span></div>
-        <div><span class="caption" data-i18n="act.nature.meta.argens.l">Argens</span><span data-i18n="act.nature.meta.argens.v">10 min · à pied possible</span></div>
-      </div>
-    </aside>
-  </div>
-</section>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js"
+    integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"
+    integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"
+    integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y"
+    crossorigin="anonymous"></script>
 
-<!-- ===================== 03 · PATRIMOINE ===================== -->
-<section id="patrimoine" class="cat-section section-pad">
-  <div class="wrap cat-grid">
-    <aside class="cat-aside reveal">
-      <div class="caption" data-i18n="act.patri.cap">03 · Patrimoine</div>
-      <h2 class="display-2" data-i18n="act.patri.h2">Mille ans <em>de pierres.</em></h2>
-      <p class="body" data-i18n="act.patri.p">De la basilique gothique de Saint-Maximin aux vestiges romains de Seillons, en passant par Cotignac et son rocher de tuf — le coin a une longue mémoire.</p>
-    </aside>
-    <div class="cat-items reveal delay-1">
-      <a class="cat-item" href="#">
-        <div class="cat-item-img"><img src="assets/images/activites/basilique_saint_maximin.jpg" alt="Basilique Sainte-Marie-Madeleine de Saint-Maximin"></div>
-        <div class="cat-item-body">
-          <h4 data-i18n="act.patri.1.h">Basilique Sainte-Marie-Madeleine</h4>
-          <p data-i18n="act.patri.1.p">Plus grand gothique de Provence, abritant les reliques de Marie-Madeleine.</p>
-          <div class="cat-item-meta"><span data-i18n="act.patri.1.meta">St-Maximin · 5 km</span></div>
-        </div>
-      </a>
-      <a class="cat-item" href="#">
-        <div class="cat-item-img"><img src="assets/images/activites/cotignac_falaise.jpg" alt="Cotignac et sa falaise de tuf"></div>
-        <div class="cat-item-body">
-          <h4 data-i18n="act.patri.2.h">Village de Cotignac</h4>
-          <p data-i18n="act.patri.2.p">Façades polychromes, rocher de tuf percé de grottes troglodytes, marché du mardi.</p>
-          <div class="cat-item-meta"><span data-i18n="act.patri.2.meta">22 km</span></div>
-        </div>
-      </a>
-      <a class="cat-item" href="#">
-        <div class="cat-item-img"><img src="assets/images/activites/tourtour_panorama.jpg" alt="Panorama de Tourtour"></div>
-        <div class="cat-item-body">
-          <h4 data-i18n="act.patri.3.h">Tourtour</h4>
-          <p data-i18n="act.patri.3.p">Classé « plus beaux villages de France ». À voir au coucher du soleil, panorama jusqu'à la mer.</p>
-          <div class="cat-item-meta"><span data-i18n="act.patri.3.meta">50 km · 1h</span></div>
-        </div>
-      </a>
-      <a class="cat-item" href="#">
-        <div class="cat-item-img"><img src="assets/images/activites/seillons_eglise.jpg" alt="Église de Seillons-Source-d'Argens"></div>
-        <div class="cat-item-body">
-          <h4 data-i18n="act.patri.4.h">Traces gallo-romaines de Seillons</h4>
-          <p data-i18n="act.patri.4.p">À deux pas du domaine. Traces gallo-romaines, céramiques antiques et tessons de tegulae. Peu visité.</p>
-          <div class="cat-item-meta"><span data-i18n="act.patri.4.meta">1,5 km · à pied</span></div>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== 04 · ŒNOTOURISME ===================== -->
-<section id="oeno" class="cat-section section-pad" style="background: var(--paper);">
-  <div class="wrap cat-grid cat-grid-rev">
-    <div class="cat-items reveal">
-      <a class="cat-item" href="#">
-        <div class="cat-item-img"><img src="assets/images/activites/la_roquebrussanne_cave.jpg" alt="Cave coopérative de La Roquebrussanne, village du Domaine du Loou"></div>
-        <div class="cat-item-body">
-          <h4 data-i18n="act.oeno.1.h">Domaine du Loou</h4>
-          <p data-i18n="act.oeno.1.p">Notre coup de cœur. Rosés gouleyants, blancs minéraux. Visite et dégustation sur RDV.</p>
-          <div class="cat-item-meta"><span data-i18n="act.oeno.1.meta1">23 km</span><span data-i18n="act.oeno.1.meta2">Coteaux Varois</span></div>
-        </div>
-      </a>
-      <a class="cat-item" href="#">
-        <div class="cat-item-img"><img src="assets/images/activites/vignoble_cabanon.jpg" alt="Cabanon et vignoble en Provence"></div>
-        <div class="cat-item-body">
-          <h4 data-i18n="act.oeno.2.h">Domaine de Saint-Mitre</h4>
-          <p data-i18n="act.oeno.2.p">À deux pas, en agriculture raisonnée HVE. Rouges fougueux et un cinsault inattendu.</p>
-          <div class="cat-item-meta"><span data-i18n="act.oeno.2.meta1">14 km</span><span data-i18n="act.oeno.2.meta2">HVE</span></div>
-        </div>
-      </a>
-      <a class="cat-item" href="#">
-        <div class="cat-item-img"><img src="assets/images/activites/villecroze_troglodyte.jpg" alt="Villecroze, village où se trouve le Château Thuerry"></div>
-        <div class="cat-item-body">
-          <h4 data-i18n="act.oeno.3.h">Château Thuerry</h4>
-          <p data-i18n="act.oeno.3.p">Beau domaine en Coteaux Varois, au cœur du Haut-Var. Rosés élégants, cave ouverte à la visite.</p>
-          <div class="cat-item-meta"><span data-i18n="act.oeno.3.meta1">42 km</span><span data-i18n="act.oeno.3.meta2">Coteaux Varois</span></div>
-        </div>
-      </a>
-      <a class="cat-item" href="#">
-        <div class="cat-item-img"><img src="assets/images/activites/pourcieux_cave_coop.jpg" alt="Cave coopérative de Pourcieux, Coteaux Varois en Provence"></div>
-        <div class="cat-item-body">
-          <h4 data-i18n="act.oeno.4.h">Route des Coteaux Varois</h4>
-          <p data-i18n="act.oeno.4.p">Onze vignerons accessibles à vélo depuis le domaine. Nous prêtons les VTC et la carte.</p>
-          <div class="cat-item-meta"><span data-i18n="act.oeno.4.meta1">20 km de boucle</span><span data-i18n="act.oeno.4.meta2">Carte fournie</span></div>
-        </div>
-      </a>
-    </div>
-    <aside class="cat-aside reveal delay-1">
-      <div class="caption" data-i18n="act.oeno.cap">04 · Œnotourisme</div>
-      <h2 class="display-2" data-i18n="act.oeno.h2">Onze vignerons <em>à vélo.</em></h2>
-      <p class="body" data-i18n="act.oeno.p">Le domaine était lui-même un vignoble jusqu'en 2003. C'est dire si le sujet nous tient à cœur. Nous vous indiquons les bons.</p>
-    </aside>
-  </div>
-</section>
-
-<!-- ===================== 05 · SPORTS ===================== -->
-<section id="sport" class="cat-section section-pad">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <div class="caption" data-i18n="act.sport.cap">05 · Sports &amp; activités</div>
-        <h2 class="display-2" data-i18n="act.sport.h2">Bouger, à votre <em>rythme.</em></h2>
-      </div>
-      <div class="section-head-right">
-        <p class="lede" data-i18n="act.sport.lede">Vélo, équitation, pêche, escalade, paddle. Nous travaillons avec des prestataires de confiance, à dix minutes maximum.</p>
-      </div>
-    </div>
-    <div class="sport-grid">
-      <div class="sport-card">
-        <div class="sport-num">01</div>
-        <h4 data-i18n="act.sport.1.h">Vélo &amp; VTC</h4>
-        <p data-i18n="act.sport.1.p">Quatre vélos à disposition. Pour aller plus loin, location chez Roue Libre à Saint-Maximin.</p>
-        <div class="sport-tag" data-i18n="act.sport.1.tag">Inclus jusqu'à 4 personnes</div>
-      </div>
-      <div class="sport-card">
-        <div class="sport-num">02</div>
-        <h4 data-i18n="act.sport.2.h">Équitation</h4>
-        <p data-i18n="act.sport.2.p">Le Mas du Forneou, à six kilomètres. Balades en pinède pour débutants et confirmés.</p>
-        <div class="sport-tag" data-i18n="act.sport.2.tag">À partir de 45€/h</div>
-      </div>
-      <div class="sport-card">
-        <div class="sport-num">03</div>
-        <h4 data-i18n="act.sport.3.h">Pêche en rivière</h4>
-        <p data-i18n="act.sport.3.p">L'Argens, à quinze minutes à pied. Truites, ombres. Carte journalière à la maison.</p>
-        <div class="sport-tag" data-i18n="act.sport.3.tag">Carte fournie · 12€/jour</div>
-      </div>
-      <div class="sport-card">
-        <div class="sport-num">04</div>
-        <h4 data-i18n="act.sport.4.h">Paddle &amp; kayak</h4>
-        <p data-i18n="act.sport.4.p">Sur le lac de Sainte-Croix. Loueurs sérieux au pont du Galetas, ouverts d'avril à oct.</p>
-        <div class="sport-tag" data-i18n="act.sport.4.tag">1h · 25€</div>
-      </div>
-      <div class="sport-card">
-        <div class="sport-num">05</div>
-        <h4 data-i18n="act.sport.5.h">Escalade</h4>
-        <p data-i18n="act.sport.5.p">Site Sous la Roche, à Saint-Julien-le-Montagnier. Voies équipées du 4 au 7b. Topos prêtés.</p>
-        <div class="sport-tag" data-i18n="act.sport.5.tag">Tous niveaux</div>
-      </div>
-      <div class="sport-card">
-        <div class="sport-num">06</div>
-        <h4 data-i18n="act.sport.6.h">Golf</h4>
-        <p data-i18n="act.sport.6.p">Golf de la Sainte-Baume, 18 trous. Practice et 9 trous accessibles aux débutants.</p>
-        <div class="sport-tag" data-i18n="act.sport.6.tag">20 km · réservation conseillée</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== 06 · MARCHÉS ===================== -->
-<section id="marches" class="cat-section section-pad" style="background: var(--ink); color: var(--bg);">
-  <div class="wrap">
-    <div class="section-head reveal" style="grid-template-columns: 1fr 1fr;">
-      <div>
-        <div class="caption" style="color: var(--sand);" data-i18n="act.marches.cap">06 · Les marchés</div>
-        <h2 class="display-2" style="color: var(--bg);" data-i18n="act.marches.h2">Six matinées sur sept, <em>quelque part autour.</em></h2>
-      </div>
-      <div class="section-head-right">
-        <p class="lede" style="color: rgba(255,255,255,.75);" data-i18n="act.marches.lede">Notre planning officieux des marchés provençaux, dans un rayon de quinze kilomètres. À chacun son jour, sa saison, son fromager préféré.</p>
-      </div>
-    </div>
-
-    <div class="markets-grid">
-      <div class="market"><div class="market-day" data-i18n="act.marches.mon.day">Lundi</div><div class="market-place" data-i18n="act.marches.mon.place">Saint-Maximin-la-Sainte-Baume</div><div class="market-tag" data-i18n="act.marches.mon.tag">8 → 12h · petit marché de producteurs</div></div>
-      <div class="market"><div class="market-day" data-i18n="act.marches.tue.day">Mardi</div><div class="market-place" data-i18n="act.marches.tue.place">Cotignac</div><div class="market-tag" data-i18n="act.marches.tue.tag">8 → 13h · Cours Gambetta · le plus animé</div></div>
-      <div class="market"><div class="market-day" data-i18n="act.marches.wed.day">Mercredi</div><div class="market-place" data-i18n="act.marches.wed.place">Saint-Maximin-la-Sainte-Baume</div><div class="market-tag" data-i18n="act.marches.wed.tag">8 → 12h30 · grand marché · 150 exposants</div></div>
-      <div class="market"><div class="market-day" data-i18n="act.marches.thu.day">Jeudi</div><div class="market-place" data-i18n="act.marches.thu.place">Aups</div><div class="market-tag" data-i18n="act.marches.thu.tag">8 → 12h · marché aux truffes noires (nov–fév)</div></div>
-      <div class="market market-off"><div class="market-day" data-i18n="act.marches.fri.day">Vendredi</div><div class="market-place" data-i18n="act.marches.fri.place">Pas de marché</div><div class="market-tag" data-i18n="act.marches.fri.tag">— journée calme, idéale pour les domaines</div></div>
-      <div class="market"><div class="market-day" data-i18n="act.marches.sat.day">Samedi</div><div class="market-place" data-i18n="act.marches.sat.place">Brignoles</div><div class="market-tag" data-i18n="act.marches.sat.tag">8 → 12h30 · grand marché du coin</div></div>
-      <div class="market"><div class="market-day" data-i18n="act.marches.sun.day">Dimanche</div><div class="market-place" data-i18n="act.marches.sun.place">Barjols</div><div class="market-tag" data-i18n="act.marches.sun.tag">8 → 13h · charcuteries de montagne</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== 07 · AIX ===================== -->
-<section id="aix" class="cat-section section-pad">
-  <div class="wrap cat-grid">
-    <aside class="cat-aside reveal">
-      <div class="caption" data-i18n="act.aix.cap">07 · Aix-en-Provence</div>
-      <h2 class="display-2" data-i18n="act.aix.h2">À 40 minutes, <em>une autre journée.</em></h2>
-      <p class="body" data-i18n="act.aix.p">Quand l'envie de ville se fait sentir : Aix, ses platanes, son cours Mirabeau, son atelier Cézanne, ses concerts au Festival d'Art Lyrique. On y va, on y revient pour le dîner.</p>
-      <div class="cat-meta">
-        <div><span class="caption" data-i18n="act.aix.meta.trajet.l">Trajet</span><span data-i18n="act.aix.meta.trajet.v">40 min en voiture</span></div>
-        <div><span class="caption" data-i18n="act.aix.meta.festival.l">Festival</span><span data-i18n="act.aix.meta.festival.v">Juillet · réserver tôt</span></div>
-        <div><span class="caption" data-i18n="act.aix.meta.marche.l">Notre marché</span><span data-i18n="act.aix.meta.marche.v">Mardi, jeudi, samedi · pl. Richelme</span></div>
-      </div>
-    </aside>
-    <div class="cat-items reveal delay-1">
-      <a class="cat-item" href="#">
-        <div class="cat-item-img"><img src="assets/images/activites/cours_mirabeau.jpg" alt="Le Cours Mirabeau, Aix-en-Provence"></div>
-        <div class="cat-item-body">
-          <h4 data-i18n="act.aix.1.h">Le Cours Mirabeau</h4>
-          <p data-i18n="act.aix.1.p">Café aux Deux Garçons. S'asseoir, ne rien faire, regarder les Aixois.</p>
-        </div>
-      </a>
-      <a class="cat-item" href="#">
-        <div class="cat-item-img"><img src="assets/images/activites/atelier_cezanne.jpg" alt="Atelier Cézanne, Aix-en-Provence"></div>
-        <div class="cat-item-body">
-          <h4 data-i18n="act.aix.2.h">Atelier Cézanne</h4>
-          <p data-i18n="act.aix.2.p">Resté exactement comme il l'a laissé. Petite visite, grosse émotion.</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== CTA ===================== -->
-<section class="final section-pad">
-  <div class="wrap" style="text-align: center;">
-    <div class="eyebrow reveal" style="justify-content: center;" data-i18n="act.cta.brow">Sur place</div>
-    <h2 class="display-1 reveal delay-1" style="max-width: 24ch; margin: var(--s-5) auto;" data-i18n="act.cta.h2">On vous compose <em>un programme.</em></h2>
-    <p class="lede reveal delay-2" style="max-width: 52ch; margin: 0 auto var(--s-6);" data-i18n="act.cta.lede">Dites-nous vos envies (rando, calme, vin, kids, art…) et nous vous préparons un itinéraire à la carte avant votre arrivée.</p>
-    <a class="btn btn-primary btn-lg reveal delay-3" href="contact.html">
-      <span data-i18n="act.cta.btn">Demander un programme</span>
-      <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
-    </a>
-  </div>
-</section>
-
-</main>
-
-<div data-slot="footer"></div>
-
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-
-<script src="i18n.js"></script>
-<script src="partials.js"></script>
-<script src="shared.js"></script>
-<script type="text/babel" src="tweaks-panel.jsx"></script>
-<script type="text/babel" src="tweaks.jsx"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+  window.addEventListener('load', function () {
+    if (typeof L === 'undefined') return;
+    var el = document.getElementById('act-map');
+    if (!el) return;
+    var LAT = 43.5189, LNG = 5.8450;
+    var map = L.map('act-map', {
+      center: [LAT, LNG],
+      zoom: 12,
+      scrollWheelZoom: false,
+      zoomControl: false,
+      attributionControl: false
+    });
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+      maxZoom: 19,
+      attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/attributions">CARTO</a>'
+    }).addTo(map);
+    L.control.attribution({ prefix: false, position: 'bottomleft' }).addTo(map);
+    L.control.zoom({ position: 'topright' }).addTo(map);
+    var pin = L.divIcon({ className: 'dsd-map-pin', iconSize: [14, 14], iconAnchor: [7, 7], popupAnchor: [0, -10] });
+    L.marker([LAT, LNG], { icon: pin })
+      .addTo(map)
+      .bindPopup('<span class="dsd-popup"><em>Domaine Saint Dominique</em><br>Seillons-Source-d\'Argens</span>');
+    setTimeout(function () { map.invalidateSize(); }, 200);
+  });
+  </script>
+  <script src="i18n.js"></script>
+  <script src="partials.js"></script>
+  <script src="shared.js"></script>
+  <script type="text/babel" src="tweaks-panel.jsx"></script>
+  <script type="text/babel" src="tweaks.jsx"></script>
 </body>
+
 </html>

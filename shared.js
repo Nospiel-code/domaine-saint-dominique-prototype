@@ -16,7 +16,7 @@
     "logoVariant": "monogram",
     "typePair": "cormorant-karla",
     "displayWeight": "light",
-    "italicColor": "terracotta",
+    "italicColor": "amber",
     "density": "regular",
     "radius": "soft",
     "phStyle": "striped",
@@ -28,11 +28,11 @@
     "showMeta": true,
     "ctaColor": "terracotta",
     "headerStyle": "transparent",
-    "eyebrowStyle": "line",
+    "eyebrowStyle": "capsule",
     "containerWidth": "regular"
   }/*EDITMODE-END*/;
 
-  const LS_KEY = 'dsd-tweaks-v1';
+  const LS_KEY = 'dsd-tweaks-v2';
   function loadTweaks() {
     try {
       const raw = localStorage.getItem(LS_KEY);
