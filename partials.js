@@ -38,7 +38,6 @@
       </div>
     </header>
     <div class="mobile-drawer" aria-hidden="true">
-      <button class="mobile-close" aria-label="Fermer">✕</button>
       <a href="index.html" data-i18n="nav.home">Accueil</a>
       <a href="domaine.html" data-i18n="nav.domain">Le Domaine</a>
       <a href="chambres.html" data-i18n="nav.rooms">Les Chambres</a>

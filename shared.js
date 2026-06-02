@@ -249,10 +249,8 @@
   function setupDrawer() {
     const open = document.querySelector('.mobile-toggle');
     const drawer = document.querySelector('.mobile-drawer');
-    const close = document.querySelector('.mobile-close');
     if (!open || !drawer) return;
-    open.addEventListener('click', () => drawer.classList.add('open'));
-    close?.addEventListener('click', () => drawer.classList.remove('open'));
+    open.addEventListener('click', () => drawer.classList.toggle('open'));
     drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drawer.classList.remove('open')));
   }
 

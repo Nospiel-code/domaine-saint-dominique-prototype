@@ -150,8 +150,15 @@
 
 @media (max-width: 61.25rem) {
   .reviews-hero {
-    grid-template-columns: 1fr;
     gap: var(--s-7);
+  }
+}
+@media (max-width: 40rem) {
+  .reviews-hero-scores {
+    flex-direction: column;
+  }
+  .score-card {
+    width: 100%;
   }
 }
 

@@ -145,7 +145,6 @@
   .incl-grid { grid-template-columns: 1fr 1fr; }
   .incl-grid li { border-right: 1px solid var(--line-soft); padding-right: var(--s-4); }
   .incl-grid li:nth-child(2n) { border-right: 0; padding-right: 0; }
-  .incl-grid li:nth-child(4n) { border-right: 0; padding-right: 0; }
 }
 @media (max-width: 35rem) {
   .incl-grid { grid-template-columns: 1fr; }
