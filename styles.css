@@ -8,10 +8,10 @@
   --bg-warm: #e7e1ce;
   --bg-deep: #dfd7be;
   --paper: #f8f4e9;
-  --terracotta: #6b7547;
-  --terracotta-deep: #4d5530;
-  --amber: #b5623a;
-  --amber-deep: #8f4a29;
+  --terracotta: #b5623a;
+  --terracotta-deep: #8f4a29;
+  --amber: #6b7547;
+  --amber-deep: #4d5530;
   --olive: #8a6a4a;
   --olive-deep: #6b5036;
   --sand: #cdb98c;
@@ -733,12 +733,12 @@ section {
   inset: 0;
   background-image: radial-gradient(
       ellipse at top left,
-      rgba(184, 90, 61, 0.15),
+      rgba(107, 117, 71, 0.18),
       transparent 50%
     ),
     radial-gradient(
       ellipse at bottom right,
-      rgba(107, 117, 71, 0.12),
+      rgba(184, 90, 61, 0.08),
       transparent 55%
     );
   pointer-events: none;

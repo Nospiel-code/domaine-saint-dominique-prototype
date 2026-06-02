@@ -20,7 +20,7 @@ const I18N = {
     "footer.follow": "Nous suivre",
     "footer.addr": "177 Quartier de Paris",
     "footer.city": "83470 Seillons-Source-d’Argens",
-    "footer.tel": "+33 6 12 34 56 78",
+    "footer.tel": "+33 6 30 07 28 16",
     "footer.mail": "domainesaintdominique@wanadoo.fr",
     "footer.legal": "Mentions légales",
     "footer.privacy": "Confidentialité",
@@ -32,9 +32,9 @@ const I18N = {
     "home.h1.l1": "Une maison",
     "home.h1.l2": "de maître",
     "home.h1.l3": "au cœur des",
-    "home.h1.l4": "oliviers.",
+    "home.h1.l4": "vignes.",
     "home.lede":
-      "À trois minutes de Saint-Maximin, Nicolas et Patricia vous accueillent dans un ancien domaine viticole posé entre vignes, pins et lumière dorée. Cinq chambres, une piscine chauffée, un parc — et le temps qui s’étire.",
+      "À trois minutes de Saint-Maximin, Nicolas et Patricia vous accueillent dans un ancien domaine viticole posé entre vignes, pins et lumière dorée. Cinq chambres, une piscine chauffée - et le temps qui s’étire.",
     "home.cta.book": "Réserver un séjour",
     "home.cta.discover": "Découvrir le domaine",
     "home.hero.cap1": "Façade sud · août",
@@ -48,16 +48,16 @@ const I18N = {
     "home.intro.h2.a": "Poser sa valise,",
     "home.intro.h2.b": "et ne plus la rouvrir.",
     "home.intro.p1":
-      "Le Domaine Saint Dominique est une ancienne maison de maître, jadis cœur d’un domaine viticole, que nous avons restauré avec patience pour en faire la maison d’hôtes dont nous rêvions. Pierres apparentes, sols cirés, volets entrouverts sur le parc — chaque pièce a gardé son caractère.",
+      "Le Domaine Saint Dominique est une ancienne maison de maître, jadis cœur d’un domaine viticole, que nous avons restauré avec patience pour en faire la maison d’hôtes dont nous rêvions. Sols en tomettes, volets entrouverts sur la nature — chaque pièce a gardé son caractère.",
     "home.intro.p2":
       "Nous vous accueillons comme on accueille des amis : un café sur la terrasse au lever du jour, des conseils pour les marchés et les sentiers, un verre partagé le soir sous les platanes.",
 
     "home.facts.0.k": "5",
     "home.facts.0.v": "chambres d’hôtes",
-    "home.facts.1.k": "1782",
+    "home.facts.1.k": "1868",
     "home.facts.1.v": "année de la bâtisse",
-    "home.facts.2.k": "4 ha",
-    "home.facts.2.v": "parc & oliveraie",
+    "home.facts.2.k": "12",
+    "home.facts.2.v": "personnes au total",
 
     "home.rooms.brow": "Les Chambres",
     "home.rooms.h2.a": "Cinq chambres,",
@@ -73,9 +73,9 @@ const I18N = {
       "« On voulait recevoir comme on aime être reçus. Sans chichis, mais avec une vraie attention. C’est devenu notre quotidien, et on ne s’en lasse pas. »",
     "home.story.sig": "Nicolas Rousselon & Patricia Prevot",
     "home.story.p1":
-      "Anciens Parisiens, nous avons découvert le domaine un dimanche d’automne 2014. La maison était à vendre, les vignes en friche, et les volets fermés depuis dix ans. Six mois plus tard, nous nous y installions avec nos enfants et nos deux chats.",
+      "Nous avons découvert le domaine un dimanche d’automne 2002. La maison était à vendre, les vignes en friche, et les volets fermés depuis dix ans. Six mois plus tard, nous nous y installions.",
     "home.story.p2":
-      "Aujourd’hui nous y vivons à l’année. Nous cultivons l’oliveraie, accueillons nos hôtes d’avril à octobre, et organisons quelques réceptions familiales sous les platanes.",
+      "Aujourd’hui nous y vivons à l’année. Nous accueillons nos hôtes d’avril à octobre, et organisons quelques réceptions familiales sous les platanes.",
     "home.story.cta": "Lire notre histoire",
 
     "home.activities.brow": "Aux alentours",
@@ -94,7 +94,7 @@ const I18N = {
     "home.press.h2": "Vu dans la presse.",
     "home.press.quote":
       "« Une maison d’hôtes comme on en rêve, où l’on est accueilli en ami et où chaque matin sent le café et le tilleul. »",
-    "home.press.src": "Var-Matin · juillet 2023",
+    "home.press.src": "juillet 2023",
     "home.press.read": "Lire l’article",
 
     /* Home — activités preview cards */
@@ -133,47 +133,47 @@ const I18N = {
 
     /* Le Domaine */
     "dom.brow": "Le Domaine",
-    "dom.h1": "Une bâtisse, un parc, et deux siècles d’histoire.",
+    "dom.h1": "Une bâtisse, des vignes, et deux siècles d’histoire.",
     "dom.lede":
-      "Bâtie en 1782, transmise de famille en famille, devenue domaine viticole au XIXᵉ, restaurée par nos soins en 2015. Voici son histoire — et la nôtre.",
+      "Bâtie en 1868, transmise de famille en famille, devenue domaine viticole au XIXᵉ, restaurée par nos soins en 2002. Voici son histoire - et la nôtre.",
 
     "dom.s1.brow": "La bâtisse",
     "dom.s1.h2": "Une maison de maître provençale.",
     "dom.s1.p1":
       "La maison principale, en pierre de pays, abrite cinq chambres, deux salons, une grande salle à manger et une cuisine ouverte sur la terrasse. Les volets, refaits à l’identique en 2016, gardent leur bleu lavande passé.",
     "dom.s1.p2":
-      "À l’intérieur, parquets cirés, carrelages en tomettes, tomettes anciennes, cheminées d’origine. Nous avons gardé tout ce qu’on pouvait garder.",
+      "À l’intérieur, parquets cirés, tomettes anciennes, cheminées d’origine. Nous avons gardé tout ce qu’on pouvait garder.",
 
-    "dom.s2.brow": "Le parc",
-    "dom.s2.h2": "Quatre hectares de douceur.",
+    "dom.s2.brow": "Le petit-déjeuner",
+    "dom.s2.h2": "Fait maison, servi à l'ombre des arbres.",
     "dom.s2.p1":
-      "Le parc s’étend sur quatre hectares — oliveraie centenaire, allée de platanes, bassin, potager, vergers. C’est là qu’on prend le café le matin et qu’on dîne le soir, entre les cigales et le chant des grillons.",
+      "Une grande terrasse ombragée par les arbres accueille le petit-déjeuner. Tout est fait maison : salades de fruits frais, gâteaux et confitures, croissants, pain frais, jus de fruits, thé et café.",
 
     "dom.s3.brow": "La piscine",
-    "dom.s3.h2": "Douze mètres, chauffée d’avril à octobre.",
+    "dom.s3.h2": "Dix mètres, chauffée d’avril à octobre.",
     "dom.s3.p1":
-      "Bassin traditionnel de douze mètres sur six, intégré dans le parc, chauffé à 28° en début et fin de saison. Transats, parasols, et l’ombre des platanes à dix mètres.",
+      "Bassin traditionnel de dix mètres sur quatre, intégré dans le parc, chauffé à 28° en début et fin de saison. Transats, parasols, et l’ombre des platanes à dix mètres.",
 
     "dom.s4.brow": "Nicolas & Patricia",
     "dom.s4.h2": "Le couple derrière la maison.",
     "dom.s4.p1":
-      "Nous nous sommes rencontrés à Paris en 1998, autour d’une bouteille de Bandol. Quinze ans, deux enfants et beaucoup de voyages plus tard, nous avons posé nos valises ici. C’est la meilleure décision que nous ayons prise.",
+      "Nous nous sommes rencontrés dans le Sud en 1998, autour d’une bouteille de Bandol. Beaucoup de voyages plus tard, nous avons posé nos valises ici. C’est la meilleure décision que nous ayons prise.",
     "dom.s4.p2":
-      "Patricia s’occupe de l’accueil, des petits-déjeuners et du potager. Nicolas répond aux mails, taille les oliviers et tient la cave. Nos deux chats — Capers et Madeleine — vous accueilleront à leur façon.",
+      "Patricia s’occupe de faire les chambres et de l’accueil. Nicolas répond aux mails, tient la cave, est le roi de la plancha et prépare une délicieuse tapenade maison.",
     "dom.s4.p3":
-      "Nous parlons français, anglais et un italien acceptable. Nous adorons partager une bouteille, indiquer les meilleurs sentiers et garder un peu de tarte tatin pour le retour.",
+      "Nous parlons français, anglais, espagnol et un italien acceptable. Nous adorons partager une bouteille, indiquer les meilleurs sentiers et garder un peu de tarte tatin pour le retour.",
 
     /* Le Domaine — chronologie */
     "dom.tl.brow": "Chronologie",
     "dom.tl.1.h": "Bâtisse d’origine",
     "dom.tl.1.p":
       "Construction de la maison de maître par la famille Bouvet, propriétaires terriens de Seillons. Pierre de Cassis, tuile romaine, volets bois.",
-    "dom.tl.2.h": "Devient domaine viticole",
+    "dom.tl.2.h": "Devient hôtel restaurant",
     "dom.tl.2.p":
-      "Plantation de huit hectares de vignes (grenache, syrah, cinsault). Construction de la cave et du chai attenant.",
-    "dom.tl.3.h": "Fin de l’exploitation",
+      "La bâtisse est transformée en hôtel restaurant. Nouvelle vie pour la maison de maître.",
+    "dom.tl.3.h": "Laissée à l’abandon",
     "dom.tl.3.p":
-      "Le dernier vigneron arrête. Les vignes restent en friche, la maison se ferme. Le domaine entre en sommeil — jusqu’à nous.",
+      "L’hôtel ferme ses portes. La maison se ferme, les volets aussi. Le domaine entre en sommeil.",
     "dom.tl.4.h": "Notre arrivée",
     "dom.tl.4.p":
       "Nous visitons un dimanche d’octobre. Coup de cœur immédiat. L’achat est acté en mars.",
@@ -203,9 +203,9 @@ const I18N = {
 
     /* Le Domaine — La Piscine specs */
     "dom.s3.spec.dim.l": "Dimensions",
-    "dom.s3.spec.dim.v": "12 × 6m",
+    "dom.s3.spec.dim.v": "10 × 4m",
     "dom.s3.spec.depth.l": "Profondeur",
-    "dom.s3.spec.depth.v": "1,20m → 2,10m",
+    "dom.s3.spec.depth.v": "1,40m partout",
     "dom.s3.spec.temp.l": "Température",
     "dom.s3.spec.temp.v": "28° chauffée",
     "dom.s3.spec.season.l": "Saison",
@@ -213,7 +213,7 @@ const I18N = {
 
     /* Le Domaine — Hôtes */
     "dom.s4.cap": "N° 02 · Les hôtes",
-    "dom.s4.sig": "Vos hôtes, depuis 2015",
+    "dom.s4.sig": "Vos hôtes, depuis 2003",
     "dom.s4.loves.title": "Quelques unes de nos petites obsessions",
     "dom.s4.loves.1": "Le café Lomi torréfié rue Marcadet",
     "dom.s4.loves.2": "Le pain de campagne du boulanger de Pourrières",
@@ -274,12 +274,12 @@ const I18N = {
     /* Rooms — spec values (translatable) */
     "rooms.rouge.capacity": "2 personnes",
     "rooms.rouge.view": "Oliveraie · sud",
-    "rooms.rouge.amenities": "Climatisation · WiFi · Coffre",
+    "rooms.rouge.amenities": "WiFi · Coffre",
     "rooms.rouge.breakfast": "Inclus",
 
     "rooms.bleue.capacity": "2 personnes",
     "rooms.bleue.view": "Parc · platanes",
-    "rooms.bleue.amenities": "Climatisation · WiFi · Bouilloire",
+    "rooms.bleue.amenities": "WiFi · Bouilloire",
     "rooms.bleue.breakfast": "Inclus · servable en chambre",
 
     "rooms.rose.capacity": "2 personnes",
@@ -289,7 +289,7 @@ const I18N = {
 
     "rooms.grise.capacity": "4 personnes (2 + 2)",
     "rooms.grise.view": "Haie de cyprès · est",
-    "rooms.grise.amenities": "Climatisation · WiFi · Lit bébé sur dem.",
+    "rooms.grise.amenities": "WiFi · Lit bébé sur dem.",
     "rooms.grise.breakfast": "Inclus (enfants -50 %)",
 
     "rooms.onde.capacity": "2 personnes",
@@ -586,7 +586,7 @@ const I18N = {
     "ct.info.hours.l": "Ouverture",
     "ct.info.hours.v": "Avril → Octobre · 7j/7",
     "ct.info.lang.l": "Langues",
-    "ct.info.lang.v": "Français · English · un poco italiano",
+    "ct.info.lang.v": "Français · English · un poco italiano · Español",
   },
 
   en: {
@@ -605,7 +605,7 @@ const I18N = {
     "footer.follow": "Follow us",
     "footer.addr": "177 Quartier de Paris",
     "footer.city": "83470 Seillons-Source-d’Argens · France",
-    "footer.tel": "+33 6 12 34 56 78",
+    "footer.tel": "+33 6 30 07 28 16",
     "footer.mail": "domainesaintdominique@wanadoo.fr",
     "footer.legal": "Legal",
     "footer.privacy": "Privacy",
@@ -617,9 +617,9 @@ const I18N = {
     "home.h1.l1": "A country",
     "home.h1.l2": "manor house",
     "home.h1.l3": "among the",
-    "home.h1.l4": "olive trees.",
+    "home.h1.l4": "vineyards.",
     "home.lede":
-      "Three minutes from Saint-Maximin, Nicolas and Patricia welcome you to a former wine estate set between vines, pines and golden light. Five rooms, a heated pool, four hectares of grounds — and time that slows right down.",
+      "Three minutes from Saint-Maximin, Nicolas and Patricia welcome you to a former wine estate set between vines, pines and golden light. Five rooms, a heated pool - and time that slows right down.",
     "home.cta.book": "Book a stay",
     "home.cta.discover": "Discover the estate",
     "home.hero.cap1": "South façade · August",
@@ -633,16 +633,16 @@ const I18N = {
     "home.intro.h2.a": "Set down your bag,",
     "home.intro.h2.b": "and don’t pick it back up.",
     "home.intro.p1":
-      "Domaine Saint Dominique is a former country manor, once the heart of a wine estate, which we have patiently restored into the guesthouse we always dreamed of. Exposed stone, waxed floors, shutters left ajar onto the grounds — every room has kept its character.",
+      "Domaine Saint Dominique is a former country manor, once the heart of a wine estate, which we have patiently restored into the guesthouse we always dreamed of. Tomette-tiled floors, shutters left ajar onto the countryside — every room has kept its character.",
     "home.intro.p2":
       "We welcome you the way one welcomes friends: a coffee on the terrace at first light, advice on the markets and the trails, a shared glass under the plane trees at dusk.",
 
     "home.facts.0.k": "5",
     "home.facts.0.v": "guest rooms",
-    "home.facts.1.k": "1782",
+    "home.facts.1.k": "1868",
     "home.facts.1.v": "year of the manor",
-    "home.facts.2.k": "4 ha",
-    "home.facts.2.v": "grounds & olive grove",
+    "home.facts.2.k": "12",
+    "home.facts.2.v": "guests in total",
 
     "home.rooms.brow": "The Rooms",
     "home.rooms.h2.a": "Five rooms,",
@@ -658,9 +658,9 @@ const I18N = {
       "“We wanted to welcome people the way we like to be welcomed. No fuss, but real attention. It’s become our daily life — and we still love it.”",
     "home.story.sig": "Nicolas & Patricia Prevot",
     "home.story.p1":
-      "Former Parisians, we found the estate one Sunday in the autumn of 2014. The house was for sale, the vines untended, the shutters closed for a decade. Six months later we moved in with our children and our two cats.",
+      "We found the estate one Sunday in the autumn of 2002. The house was for sale, the vines untended, the shutters closed for a decade. Six months later we moved in.",
     "home.story.p2":
-      "Today we live here year-round. We tend the olive grove, host guests from April to October, and put on a few family receptions under the plane trees.",
+      "Today we live here year-round. We host guests from April to October, and put on a few family receptions under the plane trees.",
     "home.story.cta": "Read our story",
 
     "home.activities.brow": "Around & About",
@@ -679,7 +679,7 @@ const I18N = {
     "home.press.h2": "They wrote about us.",
     "home.press.quote":
       "“A guesthouse you only dream of, where guests are received as friends and where every morning smells of coffee and lime blossom.”",
-    "home.press.src": "Var-Matin · July 2023",
+    "home.press.src": "July 2023",
     "home.press.read": "Read the article",
 
     /* Home — activities preview cards */
@@ -718,9 +718,9 @@ const I18N = {
 
     /* Le Domaine */
     "dom.brow": "The Estate",
-    "dom.h1": "A house, a garden, and two centuries of history.",
+    "dom.h1": "A house, vineyards, and two centuries of history.",
     "dom.lede":
-      "Built in 1782, passed down through families, turned into a wine estate in the 19th century, restored by us in 2015. Here is its story — and ours.",
+      "Built in 1868, passed down through families, turned into a wine estate in the 19th century, restored by us in 2002. Here is its story - and ours.",
 
     "dom.s1.brow": "The house",
     "dom.s1.h2": "A provençal country manor.",
@@ -729,36 +729,36 @@ const I18N = {
     "dom.s1.p2":
       "Inside: waxed parquet, tomette tiling, original fireplaces. We kept everything that could be kept.",
 
-    "dom.s2.brow": "The grounds",
-    "dom.s2.h2": "Four hectares of slow.",
+    "dom.s2.brow": "Breakfast",
+    "dom.s2.h2": "Homemade, served in the shade of the trees.",
     "dom.s2.p1":
-      "The grounds stretch over four hectares — a hundred-year-old olive grove, an avenue of plane trees, a stone basin, vegetable patch, orchards. It is here that we drink coffee in the morning and dine in the evening, between the cicadas and the crickets.",
+      "A large tree-shaded terrace is where breakfast is served. Everything is homemade: fresh fruit salads, cakes and jams, croissants, fresh bread, fruit juices, tea and coffee.",
 
     "dom.s3.brow": "The pool",
-    "dom.s3.h2": "Twelve metres, heated April to October.",
+    "dom.s3.h2": "Ten metres, heated April to October.",
     "dom.s3.p1":
-      "A traditional 12 × 6m pool, set into the grounds, heated to 28° at the shoulders of the season. Loungers, parasols, and the shade of the plane trees ten metres away.",
+      "A traditional 10 × 4m pool, set into the grounds, heated to 28° at the shoulders of the season. Loungers, parasols, and the shade of the plane trees ten metres away.",
 
     "dom.s4.brow": "Nicolas & Patricia",
     "dom.s4.h2": "The couple behind the house.",
     "dom.s4.p1":
-      "We met in Paris in 1998, over a bottle of Bandol. Fifteen years, two children and many travels later, we settled here. It is the best decision we ever made.",
+      "We met in the South of France in 1998, over a bottle of Bandol. Many travels later, we settled here. It is the best decision we ever made.",
     "dom.s4.p2":
-      "Patricia handles the welcome, the breakfasts and the vegetable garden. Nicolas answers the emails, prunes the olive trees and looks after the cellar. Our two cats — Capers and Madeleine — will greet you in their own way.",
+      "Patricia takes care of the rooms and the welcome. Nicolas answers the emails, looks after the cellar, rules the plancha and makes a delicious homemade tapenade.",
     "dom.s4.p3":
-      "We speak French, English, and passable Italian. We love sharing a bottle, pointing to the best trails, and keeping a slice of tarte tatin for your return.",
+      "We speak French, English, Spanish and passable Italian. We love sharing a bottle, pointing to the best trails, and keeping a slice of tarte tatin for your return.",
 
     /* Le Domaine — timeline */
     "dom.tl.brow": "Timeline",
     "dom.tl.1.h": "The original house",
     "dom.tl.1.p":
       "The manor house is built by the Bouvet family, landowners from Seillons. Cassis stone, Roman tile, wooden shutters.",
-    "dom.tl.2.h": "Becomes a wine estate",
+    "dom.tl.2.h": "Becomes a hotel restaurant",
     "dom.tl.2.p":
-      "Eight hectares of vines are planted (grenache, syrah, cinsault). A wine cellar and storage barn are added.",
-    "dom.tl.3.h": "End of winemaking",
+      "The house is converted into a hotel restaurant. A new chapter for the manor.",
+    "dom.tl.3.h": "Left abandoned",
     "dom.tl.3.p":
-      "The last winemaker stops. The vines are left untended, the house closes. The estate falls silent — until we arrived.",
+      "The hotel closes its doors. The house shuts down, the shutters too. The estate falls silent.",
     "dom.tl.4.h": "Our arrival",
     "dom.tl.4.p":
       "We visit on a Sunday in October. Love at first sight. The purchase is signed in March.",
@@ -788,9 +788,9 @@ const I18N = {
 
     /* Le Domaine — La Piscine specs */
     "dom.s3.spec.dim.l": "Dimensions",
-    "dom.s3.spec.dim.v": "12 × 6m",
+    "dom.s3.spec.dim.v": "10 × 4m",
     "dom.s3.spec.depth.l": "Depth",
-    "dom.s3.spec.depth.v": "1.20m → 2.10m",
+    "dom.s3.spec.depth.v": "1.40m throughout",
     "dom.s3.spec.temp.l": "Temperature",
     "dom.s3.spec.temp.v": "28° heated",
     "dom.s3.spec.season.l": "Season",
@@ -798,7 +798,7 @@ const I18N = {
 
     /* Le Domaine — Hosts */
     "dom.s4.cap": "N° 02 · Your hosts",
-    "dom.s4.sig": "Your hosts, since 2015",
+    "dom.s4.sig": "Your hosts, since 2003",
     "dom.s4.loves.title": "A few of our little obsessions",
     "dom.s4.loves.1": "Lomi coffee, roasted on rue Marcadet",
     "dom.s4.loves.2": "Country bread from the Pourrières baker",
@@ -859,12 +859,12 @@ const I18N = {
     /* Rooms — spec values (translatable) */
     "rooms.rouge.capacity": "2 guests",
     "rooms.rouge.view": "Olive grove · south",
-    "rooms.rouge.amenities": "A/C · WiFi · Safe",
+    "rooms.rouge.amenities": "WiFi · Safe",
     "rooms.rouge.breakfast": "Included",
 
     "rooms.bleue.capacity": "2 guests",
     "rooms.bleue.view": "Grounds · plane trees",
-    "rooms.bleue.amenities": "A/C · WiFi · Kettle",
+    "rooms.bleue.amenities": "WiFi · Kettle",
     "rooms.bleue.breakfast": "Included · served in room",
 
     "rooms.rose.capacity": "2 guests",
@@ -874,7 +874,7 @@ const I18N = {
 
     "rooms.grise.capacity": "4 guests (2 + 2)",
     "rooms.grise.view": "Cypress hedge · east",
-    "rooms.grise.amenities": "A/C · WiFi · Baby cot on req.",
+    "rooms.grise.amenities": "WiFi · Baby cot on req.",
     "rooms.grise.breakfast": "Included (children −50 %)",
 
     "rooms.onde.capacity": "2 guests",
@@ -1168,7 +1168,7 @@ const I18N = {
     "ct.info.hours.l": "Open",
     "ct.info.hours.v": "April → October · 7 days a week",
     "ct.info.lang.l": "Languages",
-    "ct.info.lang.v": "Français · English · un poco italiano",
+    "ct.info.lang.v": "Français · English · un poco italiano · Español",
   },
 };
 

@@ -22,12 +22,12 @@
   inset: 0;
   background: radial-gradient(
       circle at 0% 0%,
-      rgba(230, 199, 156, 0.18),
+      rgba(107, 117, 71, 0.12),
       transparent 50%
     ),
     radial-gradient(
       circle at 100% 100%,
-      rgba(184, 90, 61, 0.05),
+      rgba(184, 90, 61, 0.04),
       transparent 55%
     );
   pointer-events: none;
@@ -622,12 +622,12 @@
   inset: 0;
   background: radial-gradient(
       circle at 80% 20%,
-      rgba(184, 90, 61, 0.15),
+      rgba(107, 117, 71, 0.15),
       transparent 50%
     ),
     radial-gradient(
       circle at 10% 90%,
-      rgba(107, 117, 71, 0.12),
+      rgba(184, 90, 61, 0.08),
       transparent 60%
     );
   pointer-events: none;
@@ -659,6 +659,14 @@
   letter-spacing: 0.32em;
   color: var(--sand);
   margin-bottom: var(--s-5);
+}
+.press-logo-img {
+  height: 3.5rem;
+  width: auto;
+  display: block;
+  margin-left: 0;
+  filter: brightness(0) invert(1) sepia(1) saturate(0.3) brightness(0.85);
+  opacity: 0.85;
 }
 .press-quote {
   font-family: var(--serif);

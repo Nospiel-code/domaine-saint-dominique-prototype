@@ -126,9 +126,9 @@
   background: var(--bg);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 0.625rem var(--s-4);
-  font-family: var(--serif);
-  font-size: 1.25rem;
+  padding: 0.75rem var(--s-4);
+  font-family: var(--sans);
+  font-size: 0.9375rem;
   color: var(--ink);
   outline: none;
   transition: border-color 0.2s ease, background 0.2s ease;
@@ -136,22 +136,16 @@
 }
 .fld input::placeholder {
   color: var(--ink-faint);
-  font-style: italic;
+  font-style: normal;
   opacity: 0.7;
 }
 .fld input:focus {
   border-color: var(--terracotta);
   background: var(--paper);
 }
-.fld input[type="date"] {
-  font-family: var(--sans);
-  font-size: 0.9375rem;
-  padding: 0.75rem var(--s-4);
-  color: var(--ink);
-}
 .fld textarea {
   font-family: var(--sans);
-  font-size: 1rem;
+  font-size: 0.9375rem;
   line-height: 1.6;
   resize: vertical;
   min-height: 8.75rem;
@@ -165,7 +159,7 @@
 }
 .fld textarea::placeholder {
   color: var(--ink-faint);
-  font-style: italic;
+  font-style: normal;
   opacity: 0.7;
 }
 .fld textarea:focus {

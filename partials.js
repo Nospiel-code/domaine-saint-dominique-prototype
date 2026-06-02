@@ -14,7 +14,7 @@
           <span class="brand-mark" data-logo-slot></span>
           <span>
             <span class="brand-name">Domaine <em>Saint Dominique</em></span>
-            <div class="brand-tag">Maison d'hôtes · 1782</div>
+            <div class="brand-tag">Maison d'hôtes · 1868</div>
           </span>
         </a>
         <nav class="nav-main" aria-label="Principal">
@@ -71,7 +71,7 @@
             <ul>
               <li><span data-i18n="footer.addr">177 Quartier de Paris</span></li>
               <li><span data-i18n="footer.city">83470 Seillons-Source-d'Argens</span></li>
-              <li><a href="tel:+33612345678" data-i18n="footer.tel">+33 6 12 34 56 78</a></li>
+              <li><a href="tel:+33630072816" data-i18n="footer.tel">+33 6 30 07 28 16</a></li>
               <li><a href="mailto:domainesaintdominique@wanadoo.fr" data-i18n="footer.mail">domainesaintdominique@wanadoo.fr</a></li>
             </ul>
           </div>

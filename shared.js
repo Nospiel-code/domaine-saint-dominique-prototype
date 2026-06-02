@@ -20,7 +20,7 @@
     "density": "regular",
     "radius": "soft",
     "phStyle": "striped",
-    "brandTag": "1782",
+    "brandTag": "1868",
     "botanical": true,
     "animations": true,
     "showPress": true,
@@ -101,13 +101,13 @@
 
   function updateBrandTag(mode) {
     const labels = {
-      '1782':     { fr: "Maison d'hôtes · 1782",            en: "Guesthouse · since 1782" },
+      '1868':     { fr: "Maison d'hôtes · 1868",            en: "Guesthouse · since 1868" },
       'province': { fr: "Maison d'hôtes · Provence Verte",  en: "Guesthouse · Provence Verte" },
       'var':      { fr: "Var · 5 chambres",                 en: "Var, France · 5 rooms" },
       'off':      { fr: '', en: '' }
     };
     const lang = window.DSD?.tweaks?.lang || 'fr';
-    const set = labels[mode] || labels['1782'];
+    const set = labels[mode] || labels['1868'];
     document.querySelectorAll('.brand-tag').forEach(el => {
       el.textContent = set[lang] || set.fr;
     });
@@ -172,7 +172,7 @@
         <circle cx="19" cy="19" r="14" fill="none" stroke="currentColor" stroke-width="0.6"/>
         <text x="19" y="14" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="5.5" letter-spacing="1.4" fill="currentColor">DOMAINE</text>
         <text x="19" y="22" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="9" font-style="italic" fill="currentColor">SD</text>
-        <text x="19" y="29" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="4" letter-spacing="2" fill="currentColor">EST · 1782</text>
+        <text x="19" y="29" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="4" letter-spacing="2" fill="currentColor">EST · 1868</text>
         <line x1="6" y1="19" x2="9" y2="19" stroke="currentColor" stroke-width="0.6"/>
         <line x1="29" y1="19" x2="32" y2="19" stroke="currentColor" stroke-width="0.6"/>
       </svg>
