@@ -118,47 +118,12 @@
 
     /* Update footer count */
     const counter = document.querySelector('.rev-count');
-    if (counter) counter.textContent = `Affichage ${total} avis`;
-  }
-
-  /* ── Filter chips ────────────────────────────────────────── */
-  function setupFilters() {
-    document.querySelectorAll('.chip[data-filter]').forEach(chip => {
-      chip.addEventListener('click', () => {
-        document.querySelectorAll('.chip[data-filter]')
-          .forEach(c => c.classList.remove('chip-active'));
-        chip.classList.add('chip-active');
-        applyFilter(chip.dataset.filter);
-      });
-    });
-  }
-
-  function applyFilter(source) {
-    const wall = document.querySelector('.rev-wall');
-    if (!wall) return;
-
-    /* Show/hide cards */
-    wall.querySelectorAll('.rev-card').forEach(card => {
-      card.style.display =
-        (source === 'all' || card.dataset.source === source) ? '' : 'none';
-    });
-
-    /* Hide a section head if all its cards are hidden */
-    wall.querySelectorAll('[data-section-head]').forEach(head => {
-      let sibling = head.nextElementSibling;
-      let hasVisible = false;
-      while (sibling && !sibling.hasAttribute('data-section-head')) {
-        if (sibling.style.display !== 'none') { hasVisible = true; break; }
-        sibling = sibling.nextElementSibling;
-      }
-      head.style.display = hasVisible ? '' : 'none';
-    });
+    if (counter) counter.textContent = `${total} avis sélectionnés`;
   }
 
   /* ── Init ────────────────────────────────────────────────── */
   function init() {
     render();
-    setupFilters();
   }
 
   if (document.readyState === 'loading') {
