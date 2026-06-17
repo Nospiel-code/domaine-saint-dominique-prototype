@@ -34,7 +34,7 @@ const I18N = {
     "home.h1.l3": "au cœur des",
     "home.h1.l4": "vignes.",
     "home.lede":
-      "À trois minutes de Saint-Maximin, Nicolas et Patricia vous accueillent dans un ancien domaine viticole posé entre vignes, pins et lumière dorée. Cinq chambres, une piscine chauffée - et le temps qui s’étire.",
+      "À trois minutes de Saint-Maximin La Sainte Baume, Nicolas et Patricia vous accueillent dans un ancien domaine viticole posé entre vignes, pins et lumière dorée. Cinq chambres, une piscine chauffée - et le temps qui s’étire.",
     "home.cta.book": "Réserver un séjour",
     "home.cta.discover": "Découvrir le domaine",
     "home.hero.cap1": "Façade sud · août",
@@ -48,7 +48,7 @@ const I18N = {
     "home.intro.h2.a": "Poser sa valise,",
     "home.intro.h2.b": "et ne plus la rouvrir.",
     "home.intro.p1":
-      "Le Domaine Saint Dominique est une ancienne maison de maître, jadis cœur d’un domaine viticole, que nous avons restauré avec patience pour en faire la maison d’hôtes dont nous rêvions. Sols en tomettes, volets entrouverts sur la nature — chaque pièce a gardé son caractère.",
+      "Le Domaine Saint Dominique est une ancienne maison de maître, jadis cœur d’un domaine viticole, que nous avons restauré avec patience pour en faire la maison d’hôtes dont nous rêvions. Sols en tomettes ou parquets, Fenêtres ouvertes sur la nature - chaque pièce a été soigneusement rénovée et décorée de meubles chinés par Patricia.",
     "home.intro.p2":
       "Nous vous accueillons comme on accueille des amis : un café sur la terrasse au lever du jour, des conseils pour les marchés et les sentiers, un verre partagé le soir sous les platanes.",
 
@@ -135,14 +135,14 @@ const I18N = {
     "dom.brow": "Le Domaine",
     "dom.h1": "Une bâtisse, des vignes, et deux siècles d’histoire.",
     "dom.lede":
-      "Bâtie en 1868, transmise de famille en famille, devenue domaine viticole au XIXᵉ, restaurée par nos soins en 2002. Voici son histoire - et la nôtre.",
+      "Bâtie en 1868, transmise de famille en famille, ancien domaine viticole au XIXᵉ, puis Hôtel restaurant réputé pour ses repas pantagruelliques, l'Hotel de Paris, et enfin restaurée par nos soins à partir de 2002, durant 16 longues années.",
 
     "dom.s1.brow": "La bâtisse",
     "dom.s1.h2": "Une maison de maître provençale.",
     "dom.s1.p1":
-      "La maison principale, en pierre de pays, abrite cinq chambres, deux salons, une grande salle à manger et une cuisine ouverte sur la terrasse. Les volets, refaits à l’identique en 2016, gardent leur bleu lavande passé.",
+      "La maison principale abrite cinq chambres, un salon, une grande salle à manger avec une cheminée monumentale, et une cuisine ouverte sur la terrasse.",
     "dom.s1.p2":
-      "À l’intérieur, parquets cirés, tomettes anciennes, cheminées d’origine. Nous avons gardé tout ce qu’on pouvait garder.",
+      "À l’intérieur, parquets cirés, tomettes anciennes, cheminée d’origine. Nous avons gardé tout ce qui constitue l’âme de cette maison chargée d’histoire.",
 
     "dom.s2.brow": "Le petit-déjeuner",
     "dom.s2.h2": "Fait maison, servi à l'ombre des arbres.",
@@ -167,7 +167,7 @@ const I18N = {
     "dom.tl.brow": "Chronologie",
     "dom.tl.1.h": "Bâtisse d’origine",
     "dom.tl.1.p":
-      "Construction de la maison de maître par la famille Bouvet, propriétaires terriens de Seillons. Pierre de Cassis, tuile romaine, volets bois.",
+      "Construction de la maison de maître et des dépendances viticoles par la famille Villecroze, propriétaires terriens de Seillons.",
     "dom.tl.2.h": "Devient hôtel restaurant",
     "dom.tl.2.p":
       "La bâtisse est transformée en hôtel restaurant. Nouvelle vie pour la maison de maître.",
@@ -176,16 +176,16 @@ const I18N = {
       "L’hôtel ferme ses portes. La maison se ferme, les volets aussi. Le domaine entre en sommeil.",
     "dom.tl.4.h": "Notre arrivée",
     "dom.tl.4.p":
-      "Nous visitons un dimanche d’octobre. Coup de cœur immédiat. L’achat est acté en mars.",
+      "Nous visitons un dimanche de juin. Coup de cœur immédiat. L’achat est acté en septembre. Elle devient notre maison d’habitation principale.",
     "dom.tl.5.h": "Ouverture aux hôtes",
     "dom.tl.5.p":
-      "Après dix-huit mois de travaux — toiture, plomberie, volets, salles d’eau — nous ouvrons nos cinq chambres au printemps.",
+      "Après quelques années de rénovations — toiture, plomberie, électricité, salles d’eau, cuisines… — nous disposons de cinq chambres d’hôtes, d’une piscine et de deux terrasses extérieures pour vous recevoir dans les meilleures conditions.",
 
     /* Le Domaine — La Bâtisse specs */
     "dom.s1.spec.surface.l": "Surface",
-    "dom.s1.spec.surface.v": "420 m² habitables",
+    "dom.s1.spec.surface.v": "250 m² habitables",
     "dom.s1.spec.floors.l": "Étages",
-    "dom.s1.spec.floors.v": "Rez + 2",
+    "dom.s1.spec.floors.v": "Rdc + 2",
     "dom.s1.spec.fireplaces.l": "Cheminées",
     "dom.s1.spec.fireplaces.v": "3, dont 2 fonctionnelles",
     "dom.s1.spec.shutters.l": "Volets",
@@ -220,7 +220,8 @@ const I18N = {
     "dom.s4.loves.3": "Les Coteaux Varois en Provence, en blanc, frais",
     "dom.s4.loves.4": "Les sentiers à l’aube, avant les randonneurs",
     "dom.s4.loves.5": "Le marché de Cotignac, le mardi matin",
-    "dom.s4.loves.6": "Partager un apéro qui joue les prolongations tard dans la nuit",
+    "dom.s4.loves.6":
+      "Partager un apéro qui joue les prolongations tard dans la nuit",
 
     /* Le Domaine — CTA */
     "dom.cta.brow": "Réservation",
@@ -231,7 +232,7 @@ const I18N = {
     "rooms.brow": "Les Chambres",
     "rooms.h1": "Cinq chambres, cinq couleurs, cinq atmosphères.",
     "rooms.lede":
-      "Toutes nos chambres sont équipées d’une salle de bain privative, de linge de lit en lin lavé, du wifi, et donnent sur le parc ou les collines. Les petits-déjeuners sont inclus.",
+      "Toutes nos chambres sont situées au deuxième étage de la maison, et sont équipées d’une salle de bain privative, de linge de lit, du wifi, et donnent sur la piscine, la plaine ou les collines. Les petits-déjeuners sont inclus.",
     "rooms.book": "Réserver cette chambre",
     "rooms.from": "à partir de",
     "rooms.night": "/ nuit",
@@ -261,40 +262,40 @@ const I18N = {
 
     /* Rooms — lede descriptions */
     "rooms.rouge.lede":
-      "Notre chambre la plus lumineuse. Trois fenêtres plein sud, ouvertes sur les oliviers. Pierre apparente, sol en tomettes, lit en lin écru.",
+      "Notre chambre la plus lumineuse. Deux fenêtres plein Est, ouvertes sur la plaine de Seillons et les Bessillons, sommets dominant de la Provence Verte.",
     "rooms.bleue.lede":
-      "La plus calme. Au bout du couloir, donnant sur sa propre terrasse à l’ombre du grand platane. Notre chambre préférée à l’heure de la sieste.",
+      "La plus calme, donnant sur la terrasse sud à l’ombre de deux grands platanes. Notre chambre préférée à l’heure de la sieste.",
     "rooms.rose.lede":
-      "Une alcôve sous les toits, au calme. Poutres d’origine, lucarne sur le ciel, sol en chêne ciré. Idéal pour les couples qui aiment se cacher du monde.",
+      "Chambre la plus lumineuse, donnant sur la plaine côté ouest, au calme. Idéal pour les couples qui aiment se cacher du monde.",
     "rooms.grise.lede":
-      "La plus grande, conçue pour les familles. Deux pièces communicantes, salle de bain partagée, un dressing. Vue sur la haie de cyprès et les collines.",
+      "La plus grande, conçue pour les familles. Deux pièces communicantes, salle de bain avec douche et WC. Vue sur la plaine, façade ouest.",
     "rooms.onde.lede":
-      "L’ancienne chambre du maître de maison. Cheminée d’origine, allumée d’octobre à mars sur demande. Le coin de lecture est devenu notre QG préféré l’hiver.",
+      "Petite chambre double orientée nord-est, avec vue sur la piscine et les Bessillons, sommets dominants de la Provence Verte.",
 
     /* Rooms — spec values (translatable) */
     "rooms.rouge.capacity": "2 personnes",
-    "rooms.rouge.view": "Oliveraie · sud",
-    "rooms.rouge.amenities": "WiFi · Coffre",
+    "rooms.rouge.view": "Jardin et Piscine",
+    "rooms.rouge.amenities": "WiFi · Ventilateur · Bureau · Canapé · Salle de bain avec douche · WC séparés",
     "rooms.rouge.breakfast": "Inclus",
 
     "rooms.bleue.capacity": "2 personnes",
-    "rooms.bleue.view": "Parc · platanes",
-    "rooms.bleue.amenities": "WiFi · Bouilloire",
-    "rooms.bleue.breakfast": "Inclus · servable en chambre",
+    "rooms.bleue.view": "Terrasse · platanes",
+    "rooms.bleue.amenities": "Ventilateur · WiFi · Canapé · Salle de bain avec douche et WC",
+    "rooms.bleue.breakfast": "Inclus",
 
     "rooms.rose.capacity": "2 personnes",
-    "rooms.rose.view": "Collines · ouest",
-    "rooms.rose.amenities": "Ventilateur · WiFi · Bureau",
+    "rooms.rose.view": "Collines · façade ouest",
+    "rooms.rose.amenities": "Ventilateur · WiFi · Salle de bain avec douche et WC",
     "rooms.rose.breakfast": "Inclus",
 
     "rooms.grise.capacity": "4 personnes (2 + 2)",
-    "rooms.grise.view": "Haie de cyprès · est",
-    "rooms.grise.amenities": "WiFi · Lit bébé sur dem.",
+    "rooms.grise.view": "Terrasse sud-est et plaine · 2 platanes multi-centenaires",
+    "rooms.grise.amenities": "WiFi · Lit bébé sur demande · Petit bureau · Salle de bain avec douche et WC",
     "rooms.grise.breakfast": "Inclus (enfants -50 %)",
 
     "rooms.onde.capacity": "2 personnes",
-    "rooms.onde.view": "Allée de platanes · nord",
-    "rooms.onde.amenities": "Cheminée · WiFi · Coffre",
+    "rooms.onde.view": "Piscine · plaine et collines",
+    "rooms.onde.amenities": "WiFi · Salle de bain avec douche et WC",
     "rooms.onde.breakfast": "Inclus",
 
     /* Rooms — "Toujours inclus" section */
@@ -304,27 +305,27 @@ const I18N = {
       "Les petites attentions sont la moindre des choses. Voici tout ce qui est compris dans chaque chambre, sans supplément, sans astérisque.",
     "rooms.incl.1.h": "Petit-déjeuner",
     "rooms.incl.1.p":
-      "Confitures maison, fruits du potager, pain de Pourrières, café Lomi, jus pressé.",
+      "Confitures maison et miels, fruits frais ou salades de fruits, pain frais et croissants, café, thés, jus de fruits. Servis (sauf par mauvaises conditions) sur la terrasse de la maison, avec vue dominante sur la plaine et les vignes.",
     "rooms.incl.2.h": "Linge de lit en lin",
     "rooms.incl.2.p":
-      "Lavé en France, changé tous les trois jours ou sur demande.",
+      "Lavé et repassé dans notre maison, changé tous les trois jours ou sur demande.",
     "rooms.incl.3.h": "WiFi fibre",
     "rooms.incl.3.p":
-      "500 Mb/s · partout dans la maison et au bord de la piscine.",
+      "500 Mb/s · partout dans la maison et les chambres.",
     "rooms.incl.4.h": "Climatisation",
     "rooms.incl.4.p":
       "Réversible dans 4 chambres sur 5. Ventilateur silencieux dans la 5ᵉ.",
     "rooms.incl.5.h": "Parking",
     "rooms.incl.5.p":
-      "Dans la cour ombragée, accès direct depuis la départementale.",
+      "Privatif et sécurisé par caméra vidéo et portail automatique, accès direct depuis la route départementale.",
     "rooms.incl.6.h": "Piscine chauffée",
-    "rooms.incl.6.p": "Ouverte d’avril à octobre, 28° toute la saison.",
+    "rooms.incl.6.p": "Ouverte de mai à octobre, 28° garantis toute la saison.",
     "rooms.incl.7.h": "Conseils sur-mesure",
     "rooms.incl.7.p":
       "Cartes, sentiers, restaurants, vignerons. Demandez-nous tout.",
     "rooms.incl.8.h": "Apéro de bienvenue",
     "rooms.incl.8.p":
-      "Un verre de rosé du domaine voisin, le soir de votre arrivée.",
+      "Un verre de rosé du domaine voisin, le soir de votre arrivée, accompagné de notre fameuse Tapenade maison ou bien d’autres spécialités de notre maison.",
 
     /* Rooms — CTA */
     "rooms.cta.brow": "Réservation",
@@ -619,7 +620,7 @@ const I18N = {
     "home.h1.l3": "among the",
     "home.h1.l4": "vineyards.",
     "home.lede":
-      "Three minutes from Saint-Maximin, Nicolas and Patricia welcome you to a former wine estate set between vines, pines and golden light. Five rooms, a heated pool - and time that slows right down.",
+      "Three minutes from Saint-Maximin La Sainte Baume, Nicolas and Patricia welcome you to a former wine estate set between vines, pines and golden light. Five rooms, a heated pool - and time that slows right down.",
     "home.cta.book": "Book a stay",
     "home.cta.discover": "Discover the estate",
     "home.hero.cap1": "South façade · August",
@@ -633,7 +634,7 @@ const I18N = {
     "home.intro.h2.a": "Set down your bag,",
     "home.intro.h2.b": "and don’t pick it back up.",
     "home.intro.p1":
-      "Domaine Saint Dominique is a former country manor, once the heart of a wine estate, which we have patiently restored into the guesthouse we always dreamed of. Tomette-tiled floors, shutters left ajar onto the countryside — every room has kept its character.",
+      "Domaine Saint Dominique is a former country manor, once the heart of a wine estate, which we have patiently restored into the guesthouse we always dreamed of. Tomette-tiled or parquet floors, windows open onto the countryside — every room has been carefully renovated and decorated with antique finds by Patricia.",
     "home.intro.p2":
       "We welcome you the way one welcomes friends: a coffee on the terrace at first light, advice on the markets and the trails, a shared glass under the plane trees at dusk.",
 
@@ -720,14 +721,14 @@ const I18N = {
     "dom.brow": "The Estate",
     "dom.h1": "A house, vineyards, and two centuries of history.",
     "dom.lede":
-      "Built in 1868, passed down through families, turned into a wine estate in the 19th century, restored by us in 2002. Here is its story - and ours.",
+      "Built in 1868, passed down through families, a wine estate in the 19th century, then a renowned hotel restaurant known for its lavish feasts — the Hotel de Paris — and finally restored by us from 2002 over sixteen long years.",
 
     "dom.s1.brow": "The house",
     "dom.s1.h2": "A provençal country manor.",
     "dom.s1.p1":
-      "The main house, in local stone, holds five bedrooms, two sitting rooms, a large dining room and a kitchen that opens onto the terrace. The shutters, rebuilt to identical in 2016, keep their faded lavender blue.",
+      "The main house holds five bedrooms, a sitting room, a large dining room with a monumental fireplace, and a kitchen that opens onto the terrace.",
     "dom.s1.p2":
-      "Inside: waxed parquet, tomette tiling, original fireplaces. We kept everything that could be kept.",
+      "Inside: waxed parquet, tomette tiling, an original fireplace. We kept everything that makes the soul of this history-laden house.",
 
     "dom.s2.brow": "Breakfast",
     "dom.s2.h2": "Homemade, served in the shade of the trees.",
@@ -752,7 +753,7 @@ const I18N = {
     "dom.tl.brow": "Timeline",
     "dom.tl.1.h": "The original house",
     "dom.tl.1.p":
-      "The manor house is built by the Bouvet family, landowners from Seillons. Cassis stone, Roman tile, wooden shutters.",
+      "The manor house and its wine outbuildings are built by the Villecroze family, landowners from Seillons.",
     "dom.tl.2.h": "Becomes a hotel restaurant",
     "dom.tl.2.p":
       "The house is converted into a hotel restaurant. A new chapter for the manor.",
@@ -761,14 +762,14 @@ const I18N = {
       "The hotel closes its doors. The house shuts down, the shutters too. The estate falls silent.",
     "dom.tl.4.h": "Our arrival",
     "dom.tl.4.p":
-      "We visit on a Sunday in October. Love at first sight. The purchase is signed in March.",
+      "We visit on a Sunday in June. Love at first sight. The purchase is signed in September. It becomes our main home.",
     "dom.tl.5.h": "Opening to guests",
     "dom.tl.5.p":
-      "After eighteen months of work — roof, plumbing, shutters, bathrooms — we open our five rooms in spring.",
+      "After several years of renovations — roof, plumbing, electrics, bathrooms, kitchens… — we have five guest rooms, a pool and two outdoor terraces ready to welcome you in the best possible conditions.",
 
     /* Le Domaine — La Bâtisse specs */
     "dom.s1.spec.surface.l": "Floor area",
-    "dom.s1.spec.surface.v": "420 m² of living space",
+    "dom.s1.spec.surface.v": "250 m² of living space",
     "dom.s1.spec.floors.l": "Floors",
     "dom.s1.spec.floors.v": "Ground + 2",
     "dom.s1.spec.fireplaces.l": "Fireplaces",
@@ -816,7 +817,7 @@ const I18N = {
     "rooms.brow": "The Rooms",
     "rooms.h1": "Five rooms, five colours, five atmospheres.",
     "rooms.lede":
-      "Every room has a private bathroom, washed-linen bedding, wifi, and looks out over the grounds or the hills. Breakfast is included.",
+      "All our rooms are on the second floor of the house, and are equipped with a private bathroom, bed linen, wifi, and look out over the pool, the plain or the hills. Breakfast is included.",
     "rooms.book": "Book this room",
     "rooms.from": "from",
     "rooms.night": "/ night",
@@ -846,40 +847,40 @@ const I18N = {
 
     /* Rooms — lede descriptions */
     "rooms.rouge.lede":
-      "Our brightest room. Three south-facing windows that open onto the olive grove. Exposed stone, tomette tiles, natural linen bed.",
+      "Our brightest room. Two east-facing windows opening onto the Seillons plain and the Bessillons, the highest peaks of the Provence Verte.",
     "rooms.bleue.lede":
-      "The quietest. At the end of the corridor, with its own terrace in the shade of the great plane tree. Our favourite room for an afternoon nap.",
+      "The quietest, opening onto the south terrace in the shade of two great plane trees. Our favourite room for an afternoon nap.",
     "rooms.rose.lede":
-      "A cosy attic retreat. Original beams, a skylight, waxed oak floor. Perfect for couples who like to hide from the world.",
+      "Our brightest room, looking out over the plain to the west, peaceful and light-filled. Perfect for couples who like to hide from the world.",
     "rooms.grise.lede":
-      "The largest, designed for families. Two connecting rooms, shared bathroom, a dressing room. Views over the cypress hedge and the hills.",
+      "The largest, designed for families. Two connecting rooms, bathroom with shower and WC. Views over the plain, west-facing facade.",
     "rooms.onde.lede":
-      "The former master bedroom. Original fireplace, lit from October to March on request. The reading corner has become our favourite winter retreat.",
+      "A cosy double room facing north-east, with views over the pool and the Bessillons, the highest peaks of the Provence Verte.",
 
     /* Rooms — spec values (translatable) */
     "rooms.rouge.capacity": "2 guests",
-    "rooms.rouge.view": "Olive grove · south",
-    "rooms.rouge.amenities": "WiFi · Safe",
+    "rooms.rouge.view": "Garden and Pool",
+    "rooms.rouge.amenities": "WiFi · Fan · Desk · Sofa · Shower room · Separate WC",
     "rooms.rouge.breakfast": "Included",
 
     "rooms.bleue.capacity": "2 guests",
-    "rooms.bleue.view": "Grounds · plane trees",
-    "rooms.bleue.amenities": "WiFi · Kettle",
-    "rooms.bleue.breakfast": "Included · served in room",
+    "rooms.bleue.view": "Terrace · plane trees",
+    "rooms.bleue.amenities": "Fan · WiFi · Sofa · Shower room with WC",
+    "rooms.bleue.breakfast": "Included",
 
     "rooms.rose.capacity": "2 guests",
-    "rooms.rose.view": "Hills · west",
-    "rooms.rose.amenities": "Fan · WiFi · Desk",
+    "rooms.rose.view": "Hills · west facade",
+    "rooms.rose.amenities": "Fan · WiFi · Shower room with WC",
     "rooms.rose.breakfast": "Included",
 
     "rooms.grise.capacity": "4 guests (2 + 2)",
-    "rooms.grise.view": "Cypress hedge · east",
-    "rooms.grise.amenities": "WiFi · Baby cot on req.",
+    "rooms.grise.view": "South-east terrace and plain · 2 centuries-old plane trees",
+    "rooms.grise.amenities": "WiFi · Baby cot on request · Small desk · Shower room with WC",
     "rooms.grise.breakfast": "Included (children −50 %)",
 
     "rooms.onde.capacity": "2 guests",
-    "rooms.onde.view": "Avenue of plane trees · north",
-    "rooms.onde.amenities": "Fireplace · WiFi · Safe",
+    "rooms.onde.view": "Pool · plain and hills",
+    "rooms.onde.amenities": "WiFi · Shower room with WC",
     "rooms.onde.breakfast": "Included",
 
     /* Rooms — "Always included" section */
@@ -889,25 +890,25 @@ const I18N = {
       "The small touches are the very least we can do. Here is everything included in every room — no supplements, no asterisks.",
     "rooms.incl.1.h": "Breakfast",
     "rooms.incl.1.p":
-      "Home-made jams, garden fruit, Pourrières bread, Lomi coffee, freshly pressed juice.",
+      "Home-made jams and honeys, fresh fruit or fruit salads, fresh bread and croissants, coffee, teas, fruit juice. Served (weather permitting) on the terrace, with sweeping views over the plain and the vineyards.",
     "rooms.incl.2.h": "Linen bedding",
     "rooms.incl.2.p":
-      "Washed in France, changed every three days or on request.",
+      "Washed and ironed in-house, changed every three days or on request.",
     "rooms.incl.3.h": "Fibre WiFi",
-    "rooms.incl.3.p": "500 Mb/s · throughout the house and poolside.",
+    "rooms.incl.3.p": "500 Mb/s · throughout the house and all rooms.",
     "rooms.incl.4.h": "Air conditioning",
     "rooms.incl.4.p":
       "Reversible A/C in 4 of the 5 rooms. Silent fan in the 5th.",
     "rooms.incl.5.h": "Parking",
-    "rooms.incl.5.p": "In the shaded courtyard, direct access from the road.",
+    "rooms.incl.5.p": "Private and secured by CCTV and automatic gate, direct access from the main road.",
     "rooms.incl.6.h": "Heated pool",
-    "rooms.incl.6.p": "Open April to October, 28° all season.",
+    "rooms.incl.6.p": "Open May to October, 28° guaranteed all season.",
     "rooms.incl.7.h": "Tailored advice",
     "rooms.incl.7.p":
       "Maps, trails, restaurants, winegrowers. Ask us anything.",
     "rooms.incl.8.h": "Welcome aperitif",
     "rooms.incl.8.p":
-      "A glass of rosé from the neighbouring estate on the evening of your arrival.",
+      "A glass of rosé from the neighbouring estate on the evening of your arrival, served with our famous home-made tapenade or other house specialities.",
 
     /* Rooms — CTA */
     "rooms.cta.brow": "Booking",
